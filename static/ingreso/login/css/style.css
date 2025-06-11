@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/fondo.jpeg);
+    background-size: cover;
+    filter: blur(4px); 
+}
+
+
+.login {
+    width: 800px;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #222;
+    display: flex;
+    box-shadow: 15px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #00b894;
+}
+
+
+
+.content img{
+    width: 100%;
+}
+
+.loginform{
+    flex-basis: 50%;
+    background: #ede9e9;
+    padding: 25px;
+    text-align: center;
+}
+
+.loginform h1{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #1d3367;
+
+}
+
+.loginform p,
+.loginform a {
+    color: #1d3367;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center; /* Centra el texto */
+}
+
+.loginform a {
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px; /* Agrega un margen izquierdo para separar del párrafo */
+    margin-top: 10px; /* Agrega margen superior para separar del botón */
+    display: inline-block; /* Asegura que el enlace se muestre en la misma línea */
+}
+
+
+.loginform a:hover {
+    text-decoration: underline; /* Añade subrayado al pasar el ratón */
+}
+
+.tbox {
+    display: flex; 
+    align-items: center; 
+    border-radius: 3px;
+    background: transparent;
+    outline: none;
+    border: 1px solid #1d3367;
+    width: 100%;
+    height: 40px; 
+    margin: 30px 0;
+}
+
+.tbox input {
+    background: transparent;
+    width: 90%;
+    outline: none;
+    border: 0;
+    padding-left: 5px;
+}
+
+.tbox i {
+    color: #1d3367;
+    font-size: 15px;
+    padding: 7px;
+}
+
+
+
+
+::placeholder{
+    color: #1091c0;
+    font-weight: bolder;
+
+}
+
+.btn {
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    background: #1d3367;
+    color: #fff;
+    padding: 15px; /* Ajusta el padding para que sea más grande */
+    font-size: 18px;
+    margin-top: 20px; /* Agrega margen superior para separar del párrafo */
+}
+
+@media(max-width:768px){
+    .login{
+        flex-direction: column;
+        margin: 0 15px;
+    }
+}

@@ -1,0 +1,300 @@
+{% load static %} <!--Corresponde a la carga de archivos static en la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Arte & cultura</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static 'aprendiz/arte/css/estilo.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Página de arte & cultura SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, arte & cultura SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <!--Seccion Header-->
+    <header>
+        <div class="icono_menu">
+            <img src="{% static 'aprendiz/arte/iconos/menu.png' %}" width="34px" alt="Icono menu" id="btn_abrir">
+        </div>
+
+    </header>
+
+    <!--Seccion Menu-->
+    <nav>
+        <div class="menu" id="menu">
+            <div class="nombre_pagina">
+                <img src="{% static 'aprendiz/arte/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}" width="90px"
+                    alt="Logo sena" id="logosena">
+                <h4>Sendapp</h4>
+            </div>
+
+            <div class="opciones_menu">
+
+                <a href="{% url 'home' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/arte/iconos/pagina-de-inicio.png' %}" width="32px"
+                            alt="Icono Inicio" title="Inicio">
+                        <h4>Inicio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'deportes' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/arte/iconos/corriendo.png' %}" width="32px" alt="Icono Deportes"
+                            title="Deportes">
+                        <h4>Deportes y Gimnasio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'psicosocial' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/arte/iconos/psicologia.png' %}" width="32px"
+                            alt="Icono Psicosocial" title="Psicosocial">
+                        <h4>Psicosocial</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'arte' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/arte/iconos/musica-en-vivo.png' %}" width="32px"
+                            alt="Icono Arte y Cultura" title="Arte y Cultura">
+                        <h4>Arte y Cultura</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'enfermeria' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/arte/iconos/kit-de-primeros-auxilios.png'%}" width="32px"
+                            alt="Icono Enfermeria" title="Enfermeria">
+                        <h4>Enfermeria</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'sostenimiento' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/arte/iconos/comercio-justo.png' %}" width="32px"
+                            alt="Icono Sostenimiento" title="Apoyo Sostenimiento">
+                        <h4>Apoyo Sostenimiento</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'administrativo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/arte/iconos/usuario.png' %}" width="32px"
+                            alt="Icono Administrativo" title="Apoyo Administrativo">
+                        <h4>Apoyo Administrativo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'liderazgo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/arte/iconos/bandera.png' %}" width="32px" alt="Icono Liderazgo"
+                            title="Liderazgo">
+                        <h4>Liderazgo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'ingreso' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/salir.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Salir</h4>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección banner -->
+    <div class="banner">
+        <div class="capa"></div>
+        <div class="title-container">
+            <h2 class="typewriter">Arte & cultura</h2>
+        </div>
+    </div>
+    <!-- Fin sección banner -->
+
+    <!-- Sobre enfermeria texto -->
+    <section class="informacion">
+        <h2>Arte & Cultura del SENA CDITI</h2>
+        <p>En el Sena CDITI, el área de Artes y Cultura desempeña un papel integral en el desarrollo de los aprendices,
+            ofreciendo programas dinámicos que van más allá de la mera instrucción musical. A través de talleres y
+            clases flexibles, los estudiantes tienen la oportunidad de explorar una amplia variedad de instrumentos
+            musicales, desde teclados hasta guitarras y percusión. El énfasis en la formación integral se refleja en la
+            diversidad de géneros musicales enseñados, abarcando desde el folklore regional hasta ritmos contemporáneos.
+        </p>
+        <p>Con un enfoque constructivista en la evaluación del progreso, permitiendo a los aprendices autocalificarse en
+            diversas categorías musicales. Este enfoque no solo impulsa el desarrollo técnico, sino que también fomenta
+            la autoconciencia y la automotivación. La orientación profesional abarca desde la elección de instrumentos
+            hasta consideraciones de carrera, enfatizando la importancia de la constancia. La participación activa en
+            eventos culturales nacionales, la colaboración externa y la proyección en redes sociales destacan la
+            contribución esencial del área al enriquecimiento cultural y educativo en Sena CDITI.</p>
+    </section>
+    <!-- Fin sección -->
+
+    <!--Boton flotante pedir cita-->
+    <div class="boton-flotante"><a href="{% url 'agendar_cita' %}">Agendar Cita</a></div>
+
+    <!-- Botón Calendario -->
+    <h1 class="servicios-title1">Calendario</h1>
+    <div class="container-button">
+        <div class="button">
+            <a href="{% url 'calendario-aprendiz' %}?usuario_id=5" class="btn btn-1">Ver calendario</a>
+        </div>
+    </div>
+    <!-- Fin -botón Calendario -->
+
+    <h1 class="servicios-title2">información adicional</h1>
+
+
+    <!-- Inicio-cajas -->
+
+    <div class="container__card">
+        <!-- Tarjeta-1 -->
+        <div class="card__father">
+            <div class="card">
+                <div class="card__front" style="background-image: url('/static/aprendiz/arte/img/banner guitarra.jpg');">
+                    <div class="bg"></div>
+                    <div class="body__card_front">
+                        <h2>Horarios de atención música</h2>
+                    </div>
+                </div>
+                <div class="card__back">
+                    <div class="body__card_back">
+                        <h1>Horarios</h1>   
+                        <br>
+                        <ul>
+                            <li>Jueves y viernes, de 10 a.m. a 12 p.m. y de 4 p.m. a 5:30 p.m.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta-2 -->
+        <div class="card__father">
+            <div class="card">
+                <div class="card__front" style="background-image: url('/static/aprendiz/arte/img/musical.jpg');">
+                    <div class="bg"></div>
+                    <div class="body__card_front">
+                        <h2>Orientación y Asesoramiento Profesional</h2>
+                    </div>
+                </div>
+                <div class="card__back">
+                    <div class="body__card_back">
+                        <h1>Sobre la orientación:</h1>
+                        <p>El área musical ofrece orientación profesional, sugiriendo la licenciatura y proporcionando
+                            consejos personalizados sobre la elección de instrumentos, apuntando a guiar a los
+                            aprendices en su desarrollo técnico y decisiones futuras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta-3 -->
+        <div class="card__father">
+            <div class="card">
+                <div class="card__front" style="background-image: url('/static/aprendiz/arte/img/banner musica.jpg');">
+                    <div class="bg"></div>
+                    <div class="body__card_front">
+                        <h2>Requisitos de Admisión</h2>
+                    </div>
+                </div>
+                <div class="card__back">
+                    <div class="body__card_back">
+                        <h1>Requisitos:</h1>
+                        <ul>
+                            <li>Ser aprendiz del centro.</li>
+                            <li>Disponibilidad para al menos una clase a la semana.</li>
+                            <li>Compromiso con el desarrollo musical.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fin-caja -->
+
+    <!-- Sección contacto -->
+    <h2 class="title-p">Personal Arte & Cultura</h2>
+
+    <section id="encargados">
+        <div class="contenedor3">
+
+            <div class="encargado">
+                <img src="{% static 'aprendiz/arte/img/roger.jpeg' %}" alt="Encargado 1">
+                <div class="nombres">
+                    <p>Roger Sail Marin V.</p>
+                </div>
+                <p>Email: <br> rmarinv@sena.edu.co</p>
+                <p>Teléfono: <br>315 453 00 95 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inicio footer -->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'aprendiz/arte/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}" width="120px"
+                            alt="logo sena">
+                        <h4>SENDAPP</h4>
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <p>El CDITI es un centro de excelencia que impulsa la innovación y el desarrollo tecnológico en la
+                    industria y la información.</p>
+                <p>Diagonal. 27a #4-2 a 4-114, Dosquebradas, Risaralda.</p>
+            </div>
+            <div class="box">
+                <h2>REDES SOCIALES</h2>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/SENA/?_rdc=1&_rdr" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/SENAComunica" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQG39sX-BYT0xwAAAYsktPVo4OIRnxRfBng-LzyteEeXkVhe7sPq4bmgMByjLPDwrmyxohc9IPMvB13NOvOuSyOfxtTz6wVdfK2HhiAweQha_bl2ety3xQG-PrypLReG4sMLaI0=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fservicio-nacional-de-aprendizaje-sena-%2F"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+                <div class="tf">
+                    <p class="tf2">@SENAComunica</p>
+                    <p>www.sena.edu.co</p>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Aprendices - Ficha 2503327</b> Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <script src="{% static '/aprendiz/arte/js/script.js' %}"></script>
+</body>
+
+</html>

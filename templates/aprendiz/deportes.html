@@ -1,0 +1,407 @@
+{% load static %} <!--Corresponde a la carga de archivos static en la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Deportes</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static '/aprendiz/deportes/css/style.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Página de deportes del SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, Deportes SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <!--Seccion Header-->
+    <header>
+        <div class="icono_menu">
+            <img src="{% static 'aprendiz/principal/iconos/menu.png' %}" width="34px" alt="Icono menu" id="btn_abrir">
+        </div>
+
+    </header>
+
+    <!--Seccion Menu-->
+    <nav>
+        <div class="menu" id="menu">
+            <div class="nombre_pagina">
+                <img src="{% static 'aprendiz/principal/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}" width="90px"
+                    alt="Logo sena" id="logosena">
+                <h4>Sendapp</h4>
+            </div>
+
+            <div class="opciones_menu">
+
+                <a href="{% url 'home' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/pagina-de-inicio.png' %}" width="32px"
+                            alt="Icono Inicio" title="Inicio">
+                        <h4>Inicio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'deportes' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/corriendo.png' %}" width="32px"
+                            alt="Icono Deportes" title="Deportes">
+                        <h4>Deportes y Gimnasio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'psicosocial' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/psicologia.png' %}" width="32px"
+                            alt="Icono Psicosocial" title="Psicosocial">
+                        <h4>Psicosocial</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'arte' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/musica-en-vivo.png' %}" width="32px"
+                            alt="Icono Arte y Cultura" title="Arte y Cultura">
+                        <h4>Arte y Cultura</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'enfermeria' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/kit-de-primeros-auxilios.png'%}" width="32px"
+                            alt="Icono Enfermeria" title="Enfermeria">
+                        <h4>Enfermeria</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'sostenimiento' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/comercio-justo.png' %}" width="32px"
+                            alt="Icono Sostenimiento" title="Apoyo Sostenimiento">
+                        <h4>Apoyo Sostenimiento</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'administrativo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/usuario.png' %}" width="32px"
+                            alt="Icono Administrativo" title="Apoyo Administrativo">
+                        <h4>Apoyo Administrativo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'liderazgo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/bandera.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Liderazgo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'ingreso' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/salir.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Salir</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Banner-->
+    <div class="banner">
+        <div class="imagen">
+            <img src="{% static '/aprendiz/deportes/img/img4.jpeg' %}" alt="banner deporte">
+        </div>
+        <div class="texto-intro">
+            <h1>Área de Deportes</h1>
+            <p><span id="tb">¡Bienvenidos al Centro de Deportes y Bienestar del SENA!</span> Tu camino hacia una vida
+                más saludable y activa
+                comienza aquí. Descubre una amplia gama de oportunidades para mantenerte en forma, mejorar tus
+                habilidades deportivas y aprender a llevar un estilo de vida saludable. Nuestro excelente
+                instructor te guiará en esta emocionante aventura. Explora nuestras instalaciones
+                de primer nivel, desde el gimnasio bien equipado hasta las canchas de deportes para múltiples
+                actividades.¡Tu viaje hacia un cuerpo y mente más fuertes comienza ahora</p>
+        </div>
+    </div>
+
+    <!--Servicios-->
+    <div class="titulo">
+        <h2>Oferta <span>Servicios</span></h2>
+    </div>
+    <section class="tiles">
+
+        <article class="style1">
+            <span class="image">
+                <img src="{% static '/aprendiz/deportes/img/futbol.jpg' %}" alt="" />
+            </span>
+            <a>
+                <h2>Futbol</h2>
+                <div class="content">
+                    <p>Nuestro centro ofrece entrenamiento de fútbol para aquellos que deseen mejorar sus habilidades en
+                        este popular deporte. Aprenderás técnicas de dribbling, pases, y estrategia en el campo.</p>
+                </div>
+            </a>
+        </article>
+
+        <article class="style2">
+            <span class="image">
+                <img src="{% static '/aprendiz/deportes/img/voley.jpg' %}" alt="" />
+            </span>
+            <a>
+                <h2>Voleibol</h2>
+                <div class="content">
+                    <p>Ofrecemos entrenamiento de voleibol para todos los niveles, desde principiantes hasta jugadores
+                        avanzados. Nuestros instructores están capacitados para mejorar tus habilidades en este
+                        emocionante deporte de equipo</p>
+                </div>
+            </a>
+        </article>
+
+        <article class="style3">
+            <span class="image">
+                <img src="{% static '/aprendiz/deportes/img/tenis.jpg' %}" alt="" />
+            </span>
+            <a>
+                <h2>Tenis de Mesa</h2>
+                <div class="content">
+                    <p> Para los amantes del tenis de mesa, ofrecemos entrenamiento en esta disciplina. Aprenderás
+                        técnicas de golpeo, control y estrategia en un ambiente divertido y competitivo.</p>
+                </div>
+            </a>
+        </article>
+
+        <article class="style4">
+            <span class="image">
+                <img src="{% static '/aprendiz/deportes/img/basketball.jpg' %}" alt="" />
+            </span>
+            <a>
+                <h2>Baloncesto</h2>
+                <div class="content">
+                    <p>Nuestro centro también brinda entrenamiento en baloncesto. Los aprendices pueden unirse a las
+                        sesiones de práctica para perfeccionar sus habilidades en el juego de baloncesto.</p>
+                </div>
+            </a>
+        </article>
+
+        <article class="style5">
+            <span class="image">
+                <img src="{% static '/aprendiz/deportes/img/gimnasio.jpg' %}" alt="" />
+            </span>
+            <a>
+                <h2>Gimnasio</h2>
+                <div class="content">
+                    <p> Nuestro gimnasio está equipado con una variedad de máquinas y equipos de ejercicio. Los
+                        aprendices pueden utilizar las instalaciones para mejorar su fuerza y condición física en
+                        horarios específicos.</p>
+                </div>
+            </a>
+        </article>
+
+        <article class="style6">
+            <span class="image">
+                <img src="{% static '/aprendiz/deportes/img/asesoria.jpg' %}" alt="" />
+            </span>
+            <a>
+                <h2>Asesoria</h2>
+                <div class="content">
+                    <p> Ofrecemos asesoramiento en hábitos saludables, que incluye guía nutricional y consejos para un
+                        estilo de vida más saludable. Esto se realiza a través de talleres y asesorías personalizadas.
+                    </p>
+                </div>
+            </a>
+        </article>
+    </section>
+
+    <!--Boton flotante pedir cita-->
+    <div class="boton-flotante"><a href="{% url 'agendar_cita' %}">Agendar Cita</a></div>
+
+    <!--botón Calendario-->
+
+    <div class="container-button">
+        <div class="button">
+            <a href="{% url 'calendario-aprendiz' %}?usuario_id=3" class="btn btn-1">Ver calendario</a>
+        </div>
+    </div>
+    <!--fin -botón Calendario-->
+
+
+    <!--Horarios-->
+    <section class="horarios">
+        <h2>Horarios</h2>
+        <table>
+            <tr>
+                <th>Día</th>
+                <th>Deporte o Servicio</th>
+                <th>Horario</th>
+            </tr>
+            <tr>
+                <td>Martes</td>
+                <td>Entrenamiento de Voleibol</td>
+                <td>12:00 PM - 2:00 PM</td>
+            </tr>
+            <tr>
+                <td>Viernes</td>
+                <td>Entrenamiento de Fútbol</td>
+                <td>12:00 PM</td>
+            </tr>
+            <tr>
+                <td>Jueves</td>
+                <td>Baloncesto</td>
+                <td>12:00 PM</td>
+            </tr>
+            <tr>
+                <td>Lunes</td>
+                <td>Gimnasio</td>
+                <td>9:00 AM - 11:00 AM, 12:00 PM - 3:00 PM</td>
+            </tr>
+            <tr>
+                <td>Martes</td>
+                <td>Gimnasio</td>
+                <td>1:30 PM - 6:00 PM</td>
+            </tr>
+            <tr>
+                <td>Jueves</td>
+                <td>Gimnasio</td>
+                <td>1:00 PM - 8:00 PM</td>
+            </tr>
+            <tr>
+                <td>Viernes</td>
+                <td>Gimnasio</td>
+                <td>9:00 AM - 11:00 AM, 12:00 PM - 3:00 PM</td>
+            </tr>
+        </table>
+    </section>
+
+    <!--Informacion-->
+    <section class="informacion">
+        <div class="txt">
+            <p>En Bienestar al Aprendiz, estamos comprometidos en hacer que el deporte sea accesible para todos.
+                Nuestras
+                clases y deportes están diseñados para recibir a estudiantes de todos los niveles, incluyendo
+                principiantes.
+                No hacemos distinciones; todos son bienvenidos a unirse a nuestras actividades, independientemente de su
+                nivel de experiencia. Nuestro objetivo es brindar un ambiente inclusivo y amigable para que todos puedan
+                disfrutar y aprender.</p>
+
+            <h2>Instalaciones y Equipos</h2>
+            <p>Contamos con tres instalaciones de primera categoría para atender las necesidades de nuestros aprendices.
+                Nuestro gimnasio está equipado con máquinas multifuncionales, elípticas, bicicletas, caminadoras, pesas
+                y
+                más. Además, ofrecemos una cancha multifuncional con todas las marcas y equipos necesarios para
+                baloncesto y
+                voleibol, así como una cancha de fútbol 10 con el espacio y reglamentación adecuada para partidos
+                emocionantes.</p>
+
+            <h2>Eventos Regionales y Participación</h2>
+            <p>Nos enorgullece participar en eventos deportivos regionales que involucran a nuestros estudiantes. A
+                través
+                de estos eventos, los estudiantes tienen la oportunidad de representar al Sena-Risaralda a nivel
+                regional y
+                zonal. Los alentamos a unirse a nuestros equipos y esforzarse para calificar en estos emocionantes
+                torneos.
+            </p>
+
+            <h2>Evaluación al Progreso</h2>
+            <p>En Bienestar al Aprendiz, evaluamos el progreso de nuestros aprendices en términos de rendimiento físico,
+                actitud y constancia. Medimos características como velocidad, manejo de balón y actitud en el juego en
+                el
+                ámbito deportivo. La constancia en los entrenamientos y la responsabilidad son factores esenciales para
+                determinar quiénes representarán al Sena-Risaralda en competencias regionales.</p>
+
+            <h2>Asesoria saludable</h2>
+            <p>Ofrecemos servicios de asesoría nutricional para apoyar el bienestar integral de nuestros aprendices.
+                Nuestro
+                servicio de asesoría nutricional está disponible para todos los que buscan orientación en su
+                alimentación y
+                hábitos saludables. Nuestro enfoque es brindar recomendaciones personalizadas y trabajar estrechamente
+                con
+                los aprendices para ayudarles a alcanzar sus metas de salud y bienestar.</p>
+        </div>
+    </section>
+
+    <!--Videos-->
+    <section class="video-section">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Jtl3Mi44nt0?si=rVAxlFKQ7uXxEm3-"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-b7l74vD6N4?si=7T9_O9JTFl0Bb0lM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yQyXld0THBo?si=GQUQnz7EDoOtf_es"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+    <!--Pie de pagina-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'aprendiz/principal/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}"
+                            width="120px" alt="logo sena">
+                        <h4>SENDAPP</h4>
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <p>El CDITI es un centro de excelencia que impulsa la innovación y el desarrollo tecnológico en la
+                    industria y la información.</p>
+                <p>Diagonal. 27a #4-2 a 4-114, Dosquebradas, Risaralda.</p>
+            </div>
+            <div class="box">
+                <h2>REDES SOCIALES</h2>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/SENA/?_rdc=1&_rdr" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/SENAComunica" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQG39sX-BYT0xwAAAYsktPVo4OIRnxRfBng-LzyteEeXkVhe7sPq4bmgMByjLPDwrmyxohc9IPMvB13NOvOuSyOfxtTz6wVdfK2HhiAweQha_bl2ety3xQG-PrypLReG4sMLaI0=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fservicio-nacional-de-aprendizaje-sena-%2F"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+                <div class="tf">
+                    <p class="tf2">@SENAComunica</p>
+                    <p>www.sena.edu.co</p>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Aprendices - Ficha 2503327</b> Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <script src="{% static '/aprendiz/deportes/js/script.js' %}"></script>
+</body>
+
+</html>

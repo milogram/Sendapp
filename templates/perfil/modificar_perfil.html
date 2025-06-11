@@ -1,0 +1,56 @@
+{% load static %} <!-- Corresponde a la carga de archivos static en la página -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Modificar perfil</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static '/perfil/modificar-perfil/css/styles.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Modificar perfil bienestar al aprendiz del SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, Modificar usuario SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1>Modificar Perfil</h1>
+
+   
+    <form method="post" action="{% url 'modificar_perfil' usuario_id=usuario_actual.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">Guardar cambios</button>
+        <a href="{% url 'perfil' usuario_id=usuario_actual.id %}" class="button">Regresar</a>
+    </form>
+
+    {% if error_message %}
+    <div class="error_message" role="alert">
+        {{ error_message }}
+    </div>
+    {% endif %}
+
+    {% if success_message %}
+    <div class="success-message" role="alert">
+        {{ success_message }}
+    </div>
+    {% endif %}
+
+    {% if no_change_message %}
+    <div class="success-message" role="alert">
+        {{ no_change_message }}
+    </div>
+    {% endif %}
+
+    
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>

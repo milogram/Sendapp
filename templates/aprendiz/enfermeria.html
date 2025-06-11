@@ -1,0 +1,311 @@
+{% load static %} <!--Corresponde a la carga de archivos static en la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!--Corresponde a los caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Corresponde al rrsponsive de la pagina  escala al 1-->
+    <title>Enfermeria</title> <!--El titulo-->
+    <link rel="stylesheet" href="{% static 'aprendiz/enfermeria/css/styles.css' %}">
+    <!--Corresponde a la ubicación de los estilos en CSS-->
+    <meta name="despcription" content="Página Enfermeria SENA CDITI."> <!--Corresponde a  la descripcion de la pagina-->
+    <meta name="keywords" content="Sendapp, CDITI, Enfermeria SENA">
+    <!--Corresponde a identificacion en busqueda con palabras especiales-->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!--Corresponde a los creadores de la pagina web-->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <!--Seccion Header-->
+    <header>
+        <div class="icono_menu">
+            <img src="{% static 'aprendiz/enfermeria/iconos/menu.png' %}" width="34px" alt="Icono menu" id="btn_abrir">
+        </div>
+
+    </header>
+
+    <!--Seccion Menu-->
+    <nav>
+        <div class="menu" id="menu">
+            <div class="nombre_pagina">
+                <img src="{% static 'aprendiz/enfermeria/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}" width="90px"
+                    alt="Logo sena" id="logosena">
+                <h4>Sendapp</h4>
+            </div>
+
+            <div class="opciones_menu">
+
+                <a href="{% url 'home' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/pagina-de-inicio.png' %}" width="32px"
+                            alt="Icono Inicio" title="Inicio">
+                        <h4>Inicio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'deportes' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/corriendo.png' %}" width="32px"
+                            alt="Icono Deportes" title="Deportes">
+                        <h4>Deportes y Gimnasio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'psicosocial' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/psicologia.png' %}" width="32px"
+                            alt="Icono Psicosocial" title="Psicosocial">
+                        <h4>Psicosocial</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'arte' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/musica-en-vivo.png' %}" width="32px"
+                            alt="Icono Arte y Cultura" title="Arte y Cultura">
+                        <h4>Arte y Cultura</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'enfermeria' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/kit-de-primeros-auxilios.png'%}" width="32px"
+                            alt="Icono Enfermeria" title="Enfermeria">
+                        <h4>Enfermeria</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'sostenimiento' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/comercio-justo.png' %}" width="32px"
+                            alt="Icono Sostenimiento" title="Apoyo Sostenimiento">
+                        <h4>Apoyo Sostenimiento</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'administrativo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/usuario.png' %}" width="32px"
+                            alt="Icono Administrativo" title="Apoyo Administrativo">
+                        <h4>Apoyo Administrativo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'liderazgo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/bandera.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Liderazgo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'ingreso' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/salir.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Salir</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección banner -->
+    <div class="banner">
+        <div class="capa"></div>
+        <div class="title-container">
+            <h2 class="typewriter">Enfermeria</h2>
+        </div>
+    </div>
+    <!-- Fin sección banner -->
+
+    <!--sobre enfermeria texto-->
+    <section class="informacion">
+        <h2>Área de promoción y prevención en salud del SENA CDITI</h2>
+        <p>En el SENA CDITI, el área de Enfermeria desempeña un papel esencial en la promoción de la salud de nuestros
+            aprendices. Más allá de ofrecer atención de primeros auxilios, se centra en actividades preventivas y
+            educativas. Su labor
+            contribuye a crear un ambiente propicio para el bienestar, brindando apoyo y recursos para que los
+            aprendices tomen decisiones saludables en su vida cotidiana.
+        <p>
+        <p>En el marco del Bienestar al Aprendiz, el área de Enfermeria se dedica a velar por la salud y el bienestar de
+            nuestros aprendices. Además de proporcionar atención médica, se enfoca en la prevención y educación para
+            cultivar hábitos saludables. Su objetivo es asegurar que cada aprendiz se sienta respaldado y capacitado
+            para adoptar un estilo de vida que promueva la salud y el bienestar.</p>
+    </section>
+    <!--fin sección-->
+
+    <!--botón Calendario-->
+    <h1 class="servicios-title1">Calendario</h1>
+    <div class="container-button">
+        <div class="button">
+            <a href="{% url 'calendario-aprendiz' %}?usuario_id=6" class="btn btn-1">Ver calendario</a>
+        </div>
+    </div>
+
+    <!--Boton flotante pedir cita-->
+    <div class="boton-flotante"><a href="{% url 'agendar_cita' %}">Agendar Cita</a></div>
+
+
+    <h1 class="servicios-title2">Servicios Enfermeria</h1>
+
+    <!-- Inicio-cajas -->
+
+    <div class="container__card">
+        <!-- Tarjeta-1 -->
+        <div class="card__father">
+            <div class="card">
+                <div class="card__front"
+                    style="background-image: url('/static/aprendiz/enfermeria/img/consultas.jpg');">
+                    <div class="bg"></div>
+                    <div class="body__card_front">
+                        <h2>Ruta de atención integral</h2>
+                    </div>
+                </div>
+                <div class="card__back">
+                    <div class="body__card_back">
+                        <h1>Convenio capsule UCP</h1>
+                        <p>Los aprendices tienen acceso a un convenio exclusivo con la Universidad Católica de Pereira
+                            (UCP) a través del servicio de enfermería. Este convenio facilita la atención psicológica en
+                            el Capsule con un descuento especial, reduciendo el costo a tan solo 3.000 pesos de
+                            papelería.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta-2 -->
+        <div class="card__father">
+            <div class="card">
+                <div class="card__front" style="background-image: url('/static/aprendiz/enfermeria/img/actividades.jpg');">
+                    <div class="bg"></div>
+                    <div class="body__card_front">
+                        <h2>Actividades Periódicas de Promoción y Prevención</h2>
+                    </div>
+                </div>
+                <div class="card__back">
+                    <div class="body__card_back">
+                        <h1>Promoción y prevencion en salud</h1>
+                        <p>Se llevan a cabo tres actividades mensuales de promoción y prevención de la salud para los
+                            aprendices. Estas abordan temas diversos, contribuyendo a su formación integral.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta-3 -->
+        <div class="card__father">
+            <div class="card">
+                <div class="card__front" style="background-image: url('/static/aprendiz/enfermeria/img/atencion.jpg');">
+                    <div class="bg"></div>
+                    <div class="body__card_front">
+                        <h2>Horarios de Atención</h2>
+                    </div>
+                </div>
+                <div class="card__back">
+                    <div class="body__card_back">
+                        <h1>Horarios de Atención Amplios</h1>
+                        <p>La enfermería del SENA cuenta con horarios extendidos, de 7 am a 12 pm y de 1 pm a 9 pm, de
+                            lunes a viernes, asegurando una amplia disponibilidad para atender a los aprendices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fin-caja -->
+
+    <h2 class="title-p">Personal enfermeria</h2>
+
+    <section id="encargados">
+        <div class="contenedor3">
+
+            <div class="encargado">
+                <img src="{% static 'aprendiz/enfermeria/img/enfermera 2.png' %}" alt="Encargado 1">
+                <div class="nombres">
+                    <p>Natalia Arias
+                    </p>
+                </div>
+                <p>Email: <br> nariash@sena.edu.co</p>
+                <p>Teléfono: <br> 000 000 00 00</p>
+            </div>
+
+            <div class="encargado">
+                <img src="{% static 'aprendiz/enfermeria/img/enfermera 1.jpeg' %}" alt="Encargado 2">
+                <div class="nombres">
+                    <p>Juliana Carolina Ayala</p>
+                </div>
+                <p>Email: <br> jcayalac@sena.edu.co</p>
+                <p>Teléfono: <br> 319 226 10 43</p>
+            </div>
+
+            <div class="encargado">
+                <img src="{% static 'aprendiz/enfermeria/img/enfermera 3.png' %}" alt="Encargado 3">
+                <div class="nombres">
+                    <p>Marcela Rivera</p>
+                </div>
+                <p>Email: <br> lmriverad@sena.edu.co</p>
+                <p>Teléfono: <br> 000 000 00 00</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Inicio footer -->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'aprendiz/enfermeria/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}"
+                            width="120px" alt="logo sena">
+                        <h4>SENDAPP</h4>
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <p>El CDITI es un centro de excelencia que impulsa la innovación y el desarrollo tecnológico en la
+                    industria y la información.</p>
+                <p>Diagonal. 27a #4-2 a 4-114, Dosquebradas, Risaralda.</p>
+            </div>
+            <div class="box">
+                <h2>REDES SOCIALES</h2>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/SENA/?_rdc=1&_rdr" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/SENAComunica" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQG39sX-BYT0xwAAAYsktPVo4OIRnxRfBng-LzyteEeXkVhe7sPq4bmgMByjLPDwrmyxohc9IPMvB13NOvOuSyOfxtTz6wVdfK2HhiAweQha_bl2ety3xQG-PrypLReG4sMLaI0=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fservicio-nacional-de-aprendizaje-sena-%2F"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+                <div class="tf">
+                    <p class="tf2">@SENAComunica</p>
+                    <p>www.sena.edu.co</p>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Aprendices - Ficha 2503327</b> Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <script src="{% static '/aprendiz/enfermeria/js/script.js' %}"></script>
+</body>
+
+</html>

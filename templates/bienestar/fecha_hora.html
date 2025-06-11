@@ -1,0 +1,38 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha y hora - cita</title>
+    <link rel="stylesheet" href="{% static 'bienestar/css/fecha-hora.css' %}">
+    <meta name="description" content="Página de ingreso de fecha y hora para solicitud de citas.">
+    <meta name="keywords" content="Sendapp, CDITI, fecha y hora, SENA">
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Fecha y Hora de Cita</h1>
+
+        <form method="post" action="{% url 'confirmar_cita' solicitud_id %}">
+            {% csrf_token %}
+
+            <label for="fecha_cita">Fecha de la Cita:</label>
+            <input type="date" name="fecha_cita" required min="{% now 'Y-m-d' %}">
+            
+            <label for="hora_cita">Hora de la Cita:</label>
+            <input type="time" name="hora_cita" required>
+
+            <button type="submit">Confirmar</button>
+        </form>
+
+        <a href="{% url 'listar_solicitudes' %}" class="btn-secondary">Regresar</a>
+    </div>
+
+    
+</body>
+
+</html>

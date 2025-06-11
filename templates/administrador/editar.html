@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Editar Usuarios</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static 'administrador/css/style.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Editar usuarios administrador - SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, Editar usuarios SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href= "{% url 'get_user_list' %}" class="back-button">&#8592; Página anterior</a>
+    <h2>Editar Usuario</h2>
+
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+    <form method="post">
+        {% csrf_token %}
+
+        {% if form %}
+            {{ form.as_p }}
+        {% endif %}
+
+        <input type="submit" value="Guardar Cambios">
+    </form>
+
+    <div class="button-container">
+        <a href="{% url 'admin' %}" class="admin-home-button">Ir a Inicio</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+{% load static %} <!--Corresponde a la carga de archivos static en la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Sostenimiento</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static '/aprendiz/sostenimiento/css/styles.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Página de sostenimiento bienestar al aprendiz del SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, apoyo sostenimiento SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <!--Seccion Header-->
+    <header>
+        <div class="icono_menu">
+            <img src="{% static 'aprendiz/principal/iconos/menu.png' %}" width="34px" alt="Icono menu" id="btn_abrir">
+        </div>
+
+    </header>
+
+    <!--Seccion Menu-->
+    <nav>
+        <div class="menu" id="menu">
+            <div class="nombre_pagina">
+                <img src="{% static 'aprendiz/sostenimiento/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}" width="90px"
+                    alt="Logo sena" id="logosena">
+                <h4>Sendapp</h4>
+            </div>
+
+            <div class="opciones_menu">
+
+                <a href="{% url 'home' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/sostenimiento/iconos/pagina-de-inicio.png' %}" width="32px"
+                            alt="Icono Inicio" title="Inicio">
+                        <h4>Inicio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'deportes' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/sostenimiento/iconos/corriendo.png' %}" width="32px"
+                            alt="Icono Deportes" title="Deportes">
+                        <h4>Deportes y Gimnasio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'psicosocial' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/sostenimiento/iconos/psicologia.png' %}" width="32px"
+                            alt="Icono Psicosocial" title="Psicosocial">
+                        <h4>Psicosocial</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'arte' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/sostenimiento/iconos/musica-en-vivo.png' %}" width="32px"
+                            alt="Icono Arte y Cultura" title="Arte y Cultura">
+                        <h4>Arte y Cultura</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'enfermeria' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/sostenimiento/iconos/kit-de-primeros-auxilios.png'%}" width="32px"
+                            alt="Icono Enfermeria" title="Enfermeria">
+                        <h4>Enfermeria</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'sostenimiento' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/sostenimiento/iconos/comercio-justo.png' %}" width="32px"
+                            alt="Icono Sostenimiento" title="Apoyo Sostenimiento">
+                        <h4>Apoyo Sostenimiento</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'administrativo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/sostenimiento/iconos/usuario.png' %}" width="32px"
+                            alt="Icono Administrativo" title="Apoyo Administrativo">
+                        <h4>Apoyo Administrativo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'liderazgo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/sostenimiento/iconos/bandera.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Liderazgo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'ingreso' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/salir.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Salir</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Banner Principal-->
+    <div class="banner">
+        <div class="background-image"></div>
+        <div class="overlay"></div>
+        <div class="texto">
+            <h1>Apoyo de Sostenimiento</h1>
+            <p class="t1">Tus pasos hacia el éxito académico comienzan aquí:</p>
+            <p class="t2"> Descubre cómo nuestro apoyo y sostenimiento<br> pueden allanar el camino hacia tus metas
+                educativas.<br>
+
+            </p>
+        </div>
+    </div>
+
+    <!--Boton flotante pedir cita-->
+    <div class="boton-flotante"><a href="{% url 'agendar_cita' %}">Agendar Cita</a></div>
+
+    <!--Seccion Texto Informativo-->
+
+    <h1 id="title">Apoyo de Sostenimiento</h1>
+    <section class="informacion">
+        <p>El Área de Apoyo de Sostenimiento de nuestra institución se dedica a proporcionar a nuestros estudiantes el
+            respaldo necesario
+            para alcanzar el éxito académico. Ofrecemos una variedad de servicios, desde apoyo financiero hasta
+            asesoramiento personalizado,
+            para eliminar obstáculos en el camino de nuestros estudiantes. Estamos comprometidos en garantizar que
+            nuestros estudiantes reciban
+            el apoyo que necesitan para alcanzar sus metas académicas, independientemente de sus circunstancias.
+            Descubre cómo podemos allanar
+            el camino hacia tu éxito académico.</p>
+    </section>
+
+    <div class="container-button">
+        <div class="button">
+            <a href="{% url 'calendario-aprendiz' %}?usuario_id=9" class="btn btn-1">Ver calendario</a>
+        </div>
+    </div>
+
+
+    <h1 id="apoyos-title">Nuestros Apoyos</h1>
+
+    <section class="apoyos">
+
+
+        <ul>
+            <li>Apoyo Sostenimiento FIC</li>
+            <li>Apoyo Sostenimiento Regular</li>
+            <li>Monitorias</li>
+            <li>Apoyo de Transporte</li>
+            <li>Apoyo de Alimentacion</li>
+            <li>Apoyos Especiales</li>
+            <li>Plan de Datos</li>
+        </ul>
+
+
+        <div id="informacion-lateral"></div>
+
+    </section>
+
+    <section class="encargado">
+        <div class="tarjeta">
+            <img src="{% static 'aprendiz/principal/img/encar-sostenimiento.png' %}" alt="Encargado 2">
+            <div class="informacion">
+                <h3>Área de Apoyos y Sostenimiento</h3>
+                <p>Stefania Caicedo</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'aprendiz/liderazgo/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}"
+                            width="120px" alt="logo sena">
+                        <h4>SENDAPP</h4>
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <p>El CDITI es un centro de excelencia que impulsa la innovación y el desarrollo tecnológico en la
+                    industria y la información.</p>
+                <p>Diagonal. 27a #4-2 a 4-114, Dosquebradas, Risaralda.</p>
+            </div>
+            <div class="box">
+                <h2>REDES SOCIALES</h2>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/SENA/?_rdc=1&_rdr" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/SENAComunica" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQG39sX-BYT0xwAAAYsktPVo4OIRnxRfBng-LzyteEeXkVhe7sPq4bmgMByjLPDwrmyxohc9IPMvB13NOvOuSyOfxtTz6wVdfK2HhiAweQha_bl2ety3xQG-PrypLReG4sMLaI0=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fservicio-nacional-de-aprendizaje-sena-%2F"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+                <div class="tf">
+                    <p class="tf2">@SENAComunica</p>
+                    <p>www.sena.edu.co</p>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Aprendices - Ficha 2503327</b> Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    <script src="{% static 'aprendiz/sostenimiento/js/script.js' %}"></script>
+
+    <script>
+
+        const listaApoyos = document.querySelectorAll('.apoyos li');
+        const informacionLateral = document.getElementById('informacion-lateral');
+
+        const informacionApoyos = {
+            'Apoyo Sostenimiento FIC': 'El apoyo de sostenimiento FIC del SENA es un beneficio económico que se otorga a los aprendices que se encuentran en un programa de formación relacionado con la industria y la tecnología, y que pertenecen a los estratos 1 o 2 del SISBEN. Este apoyo tiene como finalidad contribuir a sufragar gastos básicos como transporte, alimentación y materiales de estudio, para que los aprendices puedan concentrarse en su proceso de formación sin tener que preocuparse por sus necesidades económicas. El monto del apoyo es equivalente al 60% del salario mínimo legal mensual vigente (SMLMV). Los pagos se realizan de manera mensual, durante el tiempo que dure el programa de formación.',
+            'Apoyo Sostenimiento Regular': 'El apoyo regular del SENA es un beneficio económico que se otorga a los aprendices que se encuentran en un programa de formación titulada de oferta abierta o de oferta especial social de formación, y que pertenecen a los estratos 1 o 2 del SISBEN. Este apoyo tiene como finalidad contribuir a sufragar gastos básicos como transporte, alimentación y materiales de estudio, para que los aprendices puedan concentrarse en su proceso de formación sin tener que preocuparse por sus necesidades económicas. El monto del apoyo es equivalente al 50% del salario mínimo legal mensual vigente (SMLMV). Los pagos se realizan de manera mensual, durante el tiempo que dure el programa de formación.',
+            'Monitorias': 'El apoyo monitorias del SENA es un estímulo económico que se otorga a los aprendices del SENA que se destacan por su desempeño integral en el desarrollo del programa de formación que cursan. Este apoyo tiene como finalidad reconocer y motivar el esfuerzo de los aprendices que se destacan por su compromiso, responsabilidad, liderazgo y habilidades en el proceso de formación. El monto del apoyo es equivalente al 50% del salario mínimo legal mensual vigente (SMLMV), y se otorga por un periodo de tres a seis meses, dependiendo de la disponibilidad de recursos.',
+            'Apoyo de Transporte': 'El apoyo de transporte del SENA es un beneficio económico que se otorga a los aprendices del SENA que se encuentran matriculados en un programa de formación titulada de oferta abierta o de oferta especial social de formación, y que pertenecen a los estratos 1 o 2 del SISBEN. Este apoyo tiene como finalidad contribuir a sufragar los gastos de transporte de los aprendices, para que puedan asistir a sus actividades académicas y productivas sin tener que preocuparse por este gasto.',
+            'Apoyo de Alimentacion': 'El apoyo de alimentación del SENA es un programa que brinda apoyo en especie de alimentos a los aprendices de formación laboral y formación tecnológica. El objetivo de este apoyo es ayudar a los estudiantes clasificados en estratos 1 y 2 a cubrir sus gastos básicos durante su proceso de formación. El apoyo consiste en un recurso en especie de alimentos, que se brinda a los aprendices de formación laboral y formación tecnológica, durante los periodos académicos establecidos por el SENA.',
+            'Apoyos Especiales': 'Apoyo psicosocial: es un servicio de orientación y acompañamiento que se brinda a los aprendices que enfrentan dificultades personales o familiares que puedan afectar su proceso de formación. <br><br> Apoyo para la empleabilidad: es un conjunto de servicios que se brindan a los aprendices para facilitar su inserción laboral, como capacitación para la entrevista de trabajo, elaboración de hojas de vida y orientación sobre el mercado laboral. <br> <br>Apoyo para el emprendimiento: es un conjunto de servicios que se brindan a los aprendices que desean emprender su propio negocio, como capacitación en gestión empresarial, asesoría financiera y acompañamiento en el desarrollo de su plan de negocios.',
+            'Plan de Datos': 'El apoyo plan de datos del SENA es un beneficio económico que se otorga a los aprendices del SENA, con el fin de contribuir a sufragar los gastos de conectividad para acceder a los recursos educativos del SENA. Este apoyo está dirigido a los aprendices que se encuentran matriculados en un programa de formación titulada de oferta abierta o de oferta especial social de formación, y que pertenecen a los estratos 1 o 2 del SISBEN. El monto del apoyo es equivalente a $100.000 pesos por mes, y se otorga por un periodo de tres a seis meses, dependiendo de la disponibilidad de recursos.'
+        };
+
+        listaApoyos.forEach((elemento) => {
+            elemento.addEventListener('click', () => {
+                const apoyoSeleccionado = elemento.textContent;
+                const informacion = informacionApoyos[apoyoSeleccionado];
+                informacionLateral.innerHTML = `<p>${informacion}</p>`;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

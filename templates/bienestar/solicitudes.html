@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Corresponde al responsive de la página escala al 1 -->
+  <title>Listado de solicitudes</title> <!-- El título -->
+  <link rel="stylesheet" href="{% static 'bienestar/solicitudes/css/styles.css' %}">
+  <!-- Corresponde a la ubicación de los estilos en CSS -->
+  <meta name="description" content="Página de listado de solicitudes del area bienestar al aprendiz del SENA CDITI.">
+  <!-- Corresponde a la descripción de la página -->
+  <meta name="keywords" content="Sendapp, CDITI, listar citas SENA">
+  <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+  <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+  <!-- Corresponde a los creadores de la página web -->
+  <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1>Solicitudes citas</h1>
+
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+      {% endfor %}
+  </ul>
+  {% endif %}
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Teléfono</th>
+        <th>Fecha de Cita</th>
+        <th>Hora de Cita</th>
+        <th>Número de Ficha</th>
+        <th>Descripción</th>
+        <th>Email</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for solicitud in solicitudes %}
+      <tr>
+        <td>{{ solicitud.nombre }}</td>
+        <td>{{ solicitud.apellidos }}</td>
+        <td>{{ solicitud.telefono }}</td>
+        <td>{{ solicitud.fecha_cita }}</td>
+        <td>{{ solicitud.hora_cita }}</td>
+        <td>{{ solicitud.ficha}}</td>
+        <td class="descripcion">{{ solicitud.descripcion }}</td>
+        <td>{{ solicitud.email }}</td>
+        <td>{{ solicitud.estado }}</td>
+        <td>
+          <form method="post" action="{% url 'aceptar_solicitud' solicitud.id %}">
+            {% csrf_token %}
+            <button type="submit" name="accion" value="aceptar">Aceptar</button>
+          </form>
+          <form method="post" action="{% url 'rechazar_solicitud' solicitud.id %}">
+            {% csrf_token %}
+            <button type="submit" name="accion" value="rechazar">Rechazar</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url 'bienestar' %}" class="btn btn-secondary">Regresar</a>
+</body>
+
+</html>

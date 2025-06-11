@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    margin-left: 130px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    margin-top: 80px;
+    overflow: auto; /* o overflow: visible; */
+
+
+}
+
+
+
+/*encabezado*/
+header {
+    width: 100%;
+    height: 80px;
+    background: #39A900;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+
+/*Menu*/
+
+.icono_menu {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icono_menu img {
+    cursor: pointer;
+    margin-left: 20px;
+    position: absolute;
+
+}
+
+.menu {
+    width: 130px;
+    height: 100%;
+    background-color: #39A900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 37px solid #39A900;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+}
+
+/*ocultar scroll chrome, safari y opera*/
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+/*firefox, IE, edge*/
+.menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  
+
+}
+
+.nombre_pagina {
+    padding: 19px 19px;
+    display: flex;
+    align-items: center;
+}
+
+.nombre_pagina h4 {
+    font-size: 23px;
+}
+
+.nombre_pagina img {
+    width: 85px;
+    margin-right: 20px;
+}
+
+.opciones_menu {
+    padding: 20px 38px;
+    position: absolute;
+    top: 80px;
+}
+
+.opciones_menu a {
+    color: #fff;
+    ;
+    /* 50% de opacidad */
+    cursor: default;
+    font-size: 17px;
+    display: block;
+    position: relative;
+    transition: transform 200ms;
+}
+
+.opciones_menu a:hover {
+    transform: scale(1.2);
+    /* Ajusta el valor para controlar el nivel de zoom */
+}
+
+.opciones_menu .opcion {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.opciones_menu .opcion img {
+    width: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.opciones_menu .opcion h4 {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/*Clases para usar en javaScript MENU*/
+.body_move {
+    margin-left: 250px;
+    overflow: visible; /* Cambiado de 'hidden' a 'visible' o 'auto' */
+
+}
+
+.menu_move {
+    width: 262px;
+    transform: translateX(0); /* Muestra el menú en pantalla */
+    opacity: 1; /* Hace visible el menú */
+}
+
+section {
+    margin-top: 10px;
+    padding: 50px;
+}
+
+/*banner*/
+.banner {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.background-image {
+    background-image: url('../img/banner.jpg');
+    background-size: 100% 100%;
+    /* Ocupa el 100% del ancho y alto del contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen de fondo */
+    filter: blur(5px) brightness(0.91);
+    /* Aplicar desenfoque y oscuridad */
+    height: 500px;
+
+}
+.texto{
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    /* Posición izquierda del texto */
+    transform: translate(0, -50%);
+    text-align: left;
+    color: #fff;
+}
+.texto h1{
+    font-size: 40px;
+}
+
+.texto p{
+    font-size: 28px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/*Boton Flotante "Agendar Cita" */
+
+.boton-flotante {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #4caf50; 
+    border: none;
+    border-radius: 10px; 
+    width: 130px; 
+    height: 60px; 
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px; 
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #000; 
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Agregada transición suave al color de fondo y transformación */
+    overflow: hidden; /* Oculta el desbordamiento de los seudoelementos */
+    z-index: 1000;
+}
+
+.boton-flotante a {
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.boton-flotante:hover {
+    background-color: #2ce636; 
+    font-weight: bold;
+    box-shadow: 0px 5px 11px #000;
+    transform: scale(1.1); /* Hace que el botón aumente ligeramente de tamaño al pasar el ratón */
+}
+
+.boton-flotante::before,
+.boton-flotante::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2); /* Color del resplandor */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* No afecta los eventos del mouse */
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Agrega transición suave al resplandor */
+}
+
+.boton-flotante::before {
+    transform: translate(-120%, -120%) rotate(45deg);
+}
+
+.boton-flotante::after {
+    transform: translate(120%, 120%) rotate(45deg);
+}
+
+.boton-flotante:hover::before,
+.boton-flotante:hover::after {
+    opacity: 1;
+}
+/*Fin Boton Flotante*/
+
+
+/*introduccion*/
+.introduccion {
+    background-color:#fff ;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.introduccion-content {
+    background: rgba(68, 83, 133, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.introduccion p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/*Contenido*/
+.info-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.info-text h2{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #39A900;
+}
+.info-text p{
+    margin-top: 5px;
+}
+
+.info-image {
+    flex: 1;
+    background-image: url('../img/img-psico.jpg');
+    background-size: cover;
+}
+
+/*botón calendario*/
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh; /* Ajustar la altura al 100% de la vista */
+  margin-top: 20px; /* Ajustar el margen superior según sea necesario */
+}
+
+.button {
+  flex-direction: column;
+  text-align: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.5rem;
+  position: relative;
+  margin: 32px;
+  background: linear-gradient(
+    135deg,
+    #4caf50,
+    #489f4b
+  ); /* Degradado de verde */
+  color: #ffffff;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: linear-gradient(
+    135deg,
+    #4caf50,
+    #489f4b
+  ); /* Degradado de verde */
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translate(-12px, -12px);
+}
+
+.btn:hover::after {
+  transform: translate(6px, 6px);
+}
+
+.btn:hover::before {
+  transform: translate(12px, 12px);
+}
+
+
+
+/*Tarjetas*/
+
+.cards {
+    display: flex;
+   justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.btn-descargar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+    background-color: #45a049;
+}
+
+
+
+/*Footer*/
+.pie-pagina {
+    width: 100%;
+    background-color: #1d3367;
+
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box figure h4 {
+    text-align: center;
+    margin-top: 2px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    margin-right: 15px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    background-color: #0f684b;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+.tf {
+    font-size: 13px;
+    font-weight: bold;
+    width: 250px;
+    letter-spacing: 6px;
+}
+
+.tf2 {
+    margin-top: 10px
+}
+
+/*Responsive*/
+@media screen and (max-width: 760px) {
+
+    /*menu*/
+    .body_move {
+        margin-left: 0px;
+    }
+
+    .menu_move {
+        width: 80px;
+        left: -90px;
+    }
+
+    .menu {
+        width: 90px;
+        border-right: 0px solid #03484c;
+
+    }
+
+    body {
+        margin-left: 90px;
+    }
+
+    .opciones_menu .opcion img {
+        width: 35px;
+        margin-right: 30px;
+    }
+
+    .opciones_menu {
+        padding: 20px 28px;
+    }
+
+    .icono_menu img {
+        margin-left: 5px;
+    }
+
+    .nombre_pagina {
+        padding: 10px 15px;
+
+    }
+
+    /*Contenido informativo*/
+    .info-section{
+        flex-direction: column;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        margin-top: 20px;
+    }
+/*Footer*/
+    .pie-pagina {
+        text-align: center;
+    }
+
+    .pie-pagina .grupo-1 .box figure {
+        margin: auto;
+    }
+
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .pie-pagina .grupo-1 .box figure h4 {
+        margin-top: 10px;
+    }
+
+}

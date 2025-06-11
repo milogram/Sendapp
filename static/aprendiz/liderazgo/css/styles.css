@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    margin-left: 130px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    margin-top: 80px;
+
+}
+
+
+/*encabezado*/
+header {
+    width: 100%;
+    height: 80px;
+    background: #39A900;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+/*Menu*/
+
+.icono_menu {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icono_menu img {
+    cursor: pointer;
+    margin-left: 20px;
+    position: absolute;
+
+}
+
+.menu {
+    width: 130px;
+    height: 100%;
+    background-color: #39A900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 37px solid #39A900;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+}
+
+/*ocultar scroll chrome, safari y opera*/
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+/*firefox, IE, edge*/
+.menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.nombre_pagina {
+    padding: 19px 19px;
+    display: flex;
+    align-items: center;
+}
+
+.nombre_pagina h4 {
+    font-size: 23px;
+}
+
+.nombre_pagina img {
+    width: 85px;
+    margin-right: 20px;
+}
+
+.opciones_menu {
+    padding: 20px 38px;
+    position: absolute;
+    top: 80px;
+}
+
+.opciones_menu a {
+    color: #fff;
+    ;
+    /* 50% de opacidad */
+    cursor: default;
+    font-size: 17px;
+    display: block;
+    position: relative;
+    transition: transform 200ms;
+}
+
+.opciones_menu a:hover {
+    transform: scale(1.2);
+    /* Ajusta el valor para controlar el nivel de zoom */
+}
+
+.opciones_menu .opcion {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.opciones_menu .opcion img {
+    width: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.opciones_menu .opcion h4 {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/*Clases para usar en javaScript MENU*/
+.body_move {
+    margin-left: 250px;
+}
+
+.menu_move {
+    width: 262px;
+}
+
+section {
+    margin-top: 10px;
+    padding: 50px;
+    
+}
+
+/*Banner Principal*/
+.banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.background-image {
+    background-image: url('../img/banner.jpg');
+    background-size: 100% 100%;
+    /* Ocupa el 100% del ancho y alto del contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen de fondo */
+    filter: blur(1px) brightness(0.);
+    /* Aplicar desenfoque y oscuridad */
+    height: 500px;
+
+}
+
+/* Estilo del texto */
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    /* Posición izquierda del texto */
+    transform: translate(0, -50%);
+    text-align: left;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.texto h1 {
+    font-size: 38px;
+    letter-spacing: 3px;
+    color: #39A900;
+    /* Color de título diferente */
+}
+
+.t1 {
+    width: 50%;
+}
+
+.texto p {
+    font-size: 25px;
+    color: #fff;
+    /* Color de texto principal */
+    margin: 10px 0;
+}
+
+.t2 {
+    padding-top: 30px;
+}
+
+span {
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #39A900;
+}
+
+/*Estilos del header*/
+
+
+/* Estilos para el contenedor del slider */
+.slider {
+    width: 60%; /* Ancho del slider */
+    margin: 0 auto; /* Centra el slider horizontalmente */
+    height: 400px; /* Establece una altura fija para el slider */
+}
+
+/* Estilos para las imágenes dentro del slider */
+.slider img {
+    margin-top: 3%;
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 400px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Recorta las imágenes si es necesario para mantener la relación de aspecto */
+    border-radius: 10px;
+}
+
+
+
+/* Estilos para los indicadores de navegación (puntos) */
+.slick-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0; /* Alinear los puntos en el centro */
+    right: 0; /* Alinear los puntos en el centro */
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+    
+}
+
+.slick-dots li button {
+    width: 30px;
+    height: 30px;
+    background: #000000; /* Color de fondo de los puntos inactivos */
+    border: none;
+    border-radius: 50%; /* Da forma redonda a los puntos */
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.slick-dots li.slick-active button {
+    background:#39A900; /* Color de fondo del punto activo */
+}
+
+
+
+
+/*Estilos del texto*/
+
+.text-principal{
+width: 100%;
+text-align:left;
+display:inline-block;
+font-size: 30px;
+}
+
+.text-principal h3{
+    text-align:left;
+    font-weight: bold;
+    font-style: Arial;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #39A900;
+}
+
+.text-principal p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    width: 90%;
+}
+
+/*Boton Flotante "Agendar Cita" */
+
+.boton-flotante {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #4caf50; 
+    border: none;
+    border-radius: 10px; 
+    width: 130px; 
+    height: 60px; 
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px; 
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #000; 
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Agregada transición suave al color de fondo y transformación */
+    overflow: hidden; /* Oculta el desbordamiento de los seudoelementos */
+    z-index: 1000;
+}
+
+.boton-flotante a {
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.boton-flotante:hover {
+    background-color: #2ce636; 
+    font-weight: bold;
+    box-shadow: 0px 5px 11px #000;
+    transform: scale(1.1); /* Hace que el botón aumente ligeramente de tamaño al pasar el ratón */
+}
+
+.boton-flotante::before,
+.boton-flotante::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2); /* Color del resplandor */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* No afecta los eventos del mouse */
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Agrega transición suave al resplandor */
+}
+
+.boton-flotante::before {
+    transform: translate(-120%, -120%) rotate(45deg);
+}
+
+.boton-flotante::after {
+    transform: translate(120%, 120%) rotate(45deg);
+}
+
+.boton-flotante:hover::before,
+.boton-flotante:hover::after {
+    opacity: 1;
+}
+/*Fin Boton Flotante*/
+
+/* Estilos para la sección de encargados */
+.encargados {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.encargados h2 {
+    font-size: 28px;
+    color: #39A900;
+}
+
+
+/* Estilos para la sección de encargados */
+.encargados {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.encargados h2 {
+    font-size: 28px;
+    color: #39A900;
+}
+
+.tarjeta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Añade esta línea para centrar horizontalmente */
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.tarjeta img {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.tarjeta .informacion {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+.tarjeta h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.tarjeta ul {
+    list-style: none; /* Elimina las viñetas de la lista */
+    padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
+    text-align: left ;
+}
+
+.tarjeta p {
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #39A900;
+}
+/*Boton de agendamiento*/
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14vh; /* Ajustar la altura al 100% de la vista */
+    margin-top: 20px; /* Ajustar el margen superior según sea necesario */
+  }
+  
+  .button {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 32px;
+    background: linear-gradient(
+      135deg,
+      #4caf50,
+      #489f4b
+    ); /* Degradado de verde */
+    color: #ffffff;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn::after,
+  .btn::before {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: linear-gradient(
+      135deg,
+      #4caf50,
+      #489f4b
+    ); /* Degradado de verde */
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translate(-12px, -12px);
+  }
+  
+  .btn:hover::after {
+    transform: translate(6px, 6px);
+  }
+  
+  .btn:hover::before {
+    transform: translate(12px, 12px);
+  }
+
+/* Estilo al hacer hover en las tarjetas */
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*Footer*/
+.pie-pagina {
+    width: 100%;
+    background-color: #1d3367;
+
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box figure h4 {
+    text-align: center;
+    margin-top: 2px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    margin-right: 15px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    background-color: #0f684b;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+.tf{
+    font-size: 13px;
+    font-weight: bold;
+    width: 250px;
+    letter-spacing: 6px;
+}
+.tf2{
+    margin-top: 10px
+}
+
+/*Responsive*/
+@media screen and (max-width: 760px) {
+    .body_move {
+        margin-left: 0px;
+    }
+
+    .menu_move {
+        width: 80px;
+        left: -90px;
+    }
+
+    .menu {
+        width: 90px;
+        border-right: 0px solid #03484c;
+
+    }
+
+    body {
+        margin-left: 90px;
+    }
+
+    .opciones_menu .opcion img {
+        width: 35px;
+        margin-right: 30px;
+    }
+
+    .opciones_menu {
+        padding: 20px 28px;
+    }
+
+    .icono_menu img {
+        margin-left: 5px;
+    }
+
+    .nombre_pagina {
+        padding: 10px 15px;
+    }
+
+    .pie-pagina {
+        text-align: center;
+    }
+
+    .pie-pagina .grupo-1 .box figure {
+        margin: auto;
+    }
+
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .pie-pagina .grupo-1 .box figure h4 {
+        margin-top: 10px;
+    }
+    
+}
+
+@media only screen and (min-width: 760px) and (max-width: 912px) {
+    .barra_busqueda {
+        margin-left: 90px;
+
+    }
+
+    .barra_busqueda input[type="text"] {
+        font-size: 17px;
+    }
+
+    .barra_busqueda button {
+        padding: 5px;
+    }
+
+    .barra_busqueda button img {
+        width: 20px;
+    }
+}

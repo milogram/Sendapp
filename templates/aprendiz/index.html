@@ -1,0 +1,490 @@
+{% load static %} <!--Corresponde a la carga de archivos static en la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Inicio</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static '/aprendiz/principal/css/style.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Página de inicio bienestar al aprendiz del SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, bienestar al aprendiz SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="{% static '/aprendiz/principal/css/swiper-bundle.min.css' %}">
+
+</head>
+
+<body id="body">
+    <!--Seccion Header-->
+    <header>
+        <div class="icono_menu">
+            <img src="{% static 'aprendiz/principal/iconos/menu.png' %}" width="34px" alt="Icono menu" id="btn_abrir">
+        </div>
+
+    </header>
+
+    <!--Seccion Menu-->
+    <nav>
+        <div class="menu" id="menu">
+            <div class="nombre_pagina">
+                <img src="{% static 'aprendiz/principal/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}" width="90px"
+                    alt="Logo sena" id="logosena">
+                <h4>Sendapp</h4>
+            </div>
+
+            <div class="opciones_menu">
+
+                <a href="{% url 'home' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/pagina-de-inicio.png' %}" width="32px"
+                            alt="Icono Inicio" title="Inicio">
+                        <h4>Inicio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'deportes' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/corriendo.png' %}" width="32px"
+                            alt="Icono Deportes" title="Deportes">
+                        <h4>Deportes y Gimnasio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'psicosocial' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/psicologia.png' %}" width="32px"
+                            alt="Icono Psicosocial" title="Psicosocial">
+                        <h4>Psicosocial</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'arte' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/musica-en-vivo.png' %}" width="32px"
+                            alt="Icono Arte y Cultura" title="Arte y Cultura">
+                        <h4>Arte y Cultura</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'enfermeria' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/kit-de-primeros-auxilios.png'%}" width="32px"
+                            alt="Icono Enfermeria" title="Enfermeria">
+                        <h4>Enfermeria</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'sostenimiento' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/comercio-justo.png' %}" width="32px"
+                            alt="Icono Sostenimiento" title="Apoyo Sostenimiento">
+                        <h4>Apoyo Sostenimiento</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'administrativo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/usuario.png' %}" width="32px"
+                            alt="Icono Administrativo" title="Apoyo Administrativo">
+                        <h4>Apoyo Administrativo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'liderazgo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/bandera.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Liderazgo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'ingreso' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/salir.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Salir</h4>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--Banner Principal-->
+    <div class="home">
+        <div class="swiper bg-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide dark-layer">
+                    <img src="{% static 'aprendiz/principal/img/img1.jpg' %}" alt="">
+                    <div class="text-content">
+                        <h2 class="title">Descubre tu Bienestar<span>CDITI</span></h2>
+                        <p>En el SENA CDITI, nos dedicamos a brindarte un entorno educativo donde tu bienestar es
+                            nuestra prioridad. Cada día es una oportunidad para explorar, aprender y crecer. Te
+                            invitamos a sumergirte en un ambiente que promueve el equilibrio entre el desarrollo
+                            académico, la formación personal y la creación de experiencias inolvidables.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide dark-layer">
+                    <img src="{% static 'aprendiz/principal/img/img5.jpeg' %}" alt="">
+                    <div class="text-content">
+                        <h2 class="title">Bienestar al Aprendiz<span>CDITI</span></h2>
+                        <p>Cada actividad, cada evento, está diseñado con el propósito de promover el bienestar físico,
+                            emocional y social de nuestros aprendices. Buscamos proporcionar oportunidades que
+                            fortalezcan la salud mental y física, alentando un equilibrio entre el estudio y la vida
+                            diaria. En el SENA CDITI, creemos que un aprendizaje efectivo va de la mano con el bienestar
+                            personal, contribuyendo así a la formación de profesionales completos y comprometidos con su
+                            desarrollo y el de su comunidad. Únete a nosotros en este viaje hacia un bienestar integral
+                            y descubre todo lo que el SENA CDITI tiene para ofrecer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide dark-layer">
+                    <img src="{% static 'aprendiz/principal/img/img3.jpeg' %}" alt="">
+                    <div class="text-content">
+                        <h2 class="title">Innovación y logros<span>CDITI</span></h2>
+                        <p>Celebramos la innovación y los logros de nuestros aprendices. En eventos como la exposición
+                            de proyectos estudiantiles, destacamos el ingenio y la dedicación de cada estudiante. Aquí,
+                            el aprendizaje va más allá de las aulas, brindando oportunidades para desarrollar
+                            habilidades prácticas y construir un futuro exitoso.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide dark-layer">
+                    <img src="{% static 'aprendiz/principal/img/img4.jpeg' %}" alt="">
+                    <div class="text-content">
+                        <h2 class="title">Enfoque bienestar<span>CDITI</span></h2>
+                        <p>Nuestras áreas abarcan desde Deportes para promover la salud física y el trabajo en equipo,
+                            hasta Enfermería para cuidados médicos. Proporcionamos Apoyo a Sostenimiento y
+                            Administrativo para garantizar recursos y simplificar procesos, y promovemos el liderazgo
+                            social para empoderar a nuestros aprendices como líderes en sus comunidades.
+
+                            Descubre un ambiente educativo donde el desarrollo personal y académico se entrelazan,
+                            promoviendo un crecimiento integral que va más allá del aula. En el SENA CDITI, tu bienestar
+                            es nuestra prioridad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slider-thumbs">
+            <div class="swiper-wrapper thumbs-container">
+                <img src="{% static 'aprendiz/principal/img/img1.jpg' %}" class="swiper-slide" alt="">
+                <img src="{% static 'aprendiz/principal/img/img5.jpeg' %}" class="swiper-slide" alt="">
+                <img src="{% static 'aprendiz/principal/img/img3.jpeg' %}" class="swiper-slide" alt="">
+                <img src="{% static 'aprendiz/principal/img/img4.jpeg' %}" class="swiper-slide" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <!--Seccion Texto Informativo-->
+    <section class="informacion-princi">
+        <h1>Conoce toda la información de nuestras diversas áreas y solicita agendamientos de manera sencilla.</h1>
+        <p>El bienestar del aprendiz es un aspecto fundamental en su desarrollo personal y profesional. En el
+            Servicio Nacional de Aprendizaje (SENA), nos comprometemos a ofrecer a nuestros aprendices un entorno
+            que promueva el equilibrio y la calidad de vida.
+
+            Nuestro enfoque en el bienestar abarca diversos aspectos, desde el cuidado de la salud física y mental
+            hasta el apoyo en el crecimiento profesional. Ofrecemos recursos y programas diseñados para ayudar a los
+            aprendices a mantener una mente y un cuerpo saludables, así como a adquirir las habilidades y la
+            confianza necesarias para avanzar en sus carreras.
+
+            En el SENA, creemos que el bienestar no solo beneficia al individuo, sino que también enriquece la
+            comunidad en su conjunto. Un aprendiz que se siente bien consigo mismo y en su entorno es un aprendiz
+            más motivado y comprometido.
+
+            Explora los recursos y servicios que ofrecemos para promover tu bienestar y aprovecha al máximo tu
+            tiempo con nosotros. Estamos aquí para apoyarte en tu camino hacia el éxito.</p>
+    </section>
+
+    <!-- Sección de Áreas de Bienestar para Aprendices -->
+    <section id="areas-bienestar">
+        <h2 class='txtB'>Áreas de Bienestar para Aprendices</h2>
+        <div class="contenedor2">
+
+            <div class="area">
+                <img src="{% static 'aprendiz/principal/img/deporte.jpg' %}" alt="Área 1">
+                <div class="area-content">
+                    <h3>Área de Deporte y Gimnasio</h3>
+                    <p>Fomentamos un estilo de vida activo y saludable a través de programas y actividades
+                        deportivas que promueven la vitalidad y el bienestar físico.</p>
+                    <a href="{% url 'deportes' %}" class="ver-mas">Ver Más</a>
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="{% static 'aprendiz/principal/img/apoyo.jpg' %}" alt="Área 2">
+                <div class="area-content">
+
+                    <h3>Área de Apoyos y Sostenimiento</h3>
+                    <p>Ofrecemos recursos y programas para ayudar a nuestros aprendices a mantener una buena calidad
+                        de vida y afrontar desafíos económicos.</p>
+                    <a href="{% url 'sostenimiento' %}" class="ver-mas">Ver Más</a>
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="{% static 'aprendiz/principal/img/arte.jpg' %}" alt="Área 3">
+                <div class="area-content">
+
+                    <h3>Área de Arte y Cultura</h3>
+                    <p>Promovemos la creatividad y la expresión artística como parte fundamental del bienestar y la
+                        identidad de nuestros aprendices.</p>
+                    <a href="{% url 'arte' %}" class="ver-mas">Ver Más</a>
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="{% static 'aprendiz/principal/img/psico.jpg' %}" alt="Área 4">
+                <div class="area-content">
+
+                    <h3>Área de Psicosocial</h3>
+                    <p>Brindamos apoyo y orientación para abordar aspectos emocionales y psicológicos, promoviendo
+                        la salud mental y emocional.</p>
+                    <a href="{% url 'psicosocial' %}" class="ver-mas">Ver Más</a>
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="{% static 'aprendiz/principal/img/enfermeria.jpg' %}" alt="Área 5">
+                <div class="area-content">
+
+                    <h3>Área de Enfermería</h3>
+                    <p>Nuestros servicios de enfermería garantizan que la salud y el bienestar de nuestros
+                        aprendices estén siempre en buenas manos.</p>
+                    <a href="{% url 'enfermeria' %}" class="ver-mas">Ver Más</a>
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="{% static 'aprendiz/principal/img/administrativo.jpg' %}" alt="Área 6">
+                <div class="area-content">
+
+
+                    <h3>Área de Apoyo Administrativo</h3>
+                    <p>Ofrecemos servicios administrativos para facilitar la gestión de nuestros aprendices en
+                        diferentes aspectos.</p>
+
+                    <a href="{% url 'administrativo' %}" class="ver-mas">Ver Más</a>
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="{% static 'aprendiz/principal/img/liderazgo.jpg' %}" alt="Área 7">
+                <div class="area-content">
+
+                    <h3>Área de Liderazgo</h3>
+                    <p>Fomentamos el desarrollo de habilidades de liderazgo y trabajo en equipo entre nuestros
+                        aprendices.</p>
+                    <a href="{% url 'liderazgo' %}" class="ver-mas">Ver Más</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Boton flotante pedir cita-->
+    <div class="boton-flotante"><a href="{% url 'agendar_cita' %}">Agendar Cita</a></div>
+
+
+    <!--Encargados-->
+    <section class="encargados">
+        <h2>Encargados</h2>
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <img src="{% static 'aprendiz/principal/img/encar-deportes.png' %}" alt="Encargado 1">
+                <div class="informacion">
+                    <h3>Área de Deporte y Gimnasio</h3>
+                    <p>Juan Carlos Martínez Castaño
+                    </p>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <img src="{% static 'aprendiz/principal/img/encar-sostenimiento.png' %}" alt="Encargado 2">
+                <div class="informacion">
+                    <h3>Área de Apoyos y Sostenimiento</h3>
+                    <p>Stefania Caicedo
+                    </p>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <img src="{% static 'aprendiz/principal/img/encar-musica.png' %}" alt="Encargado 3">
+                <div class="informacion">
+                    <h3>Área de Arte y Cultura</h3>
+                    <p>Roger Sail Marin V.
+                    </p>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <img src="{% static 'aprendiz/principal/img/encar-psico.jpg' %}" alt="Encargado 4">
+                <div class="informacion">
+                    <h3>Área de Psicosocial</h3>
+                    <p>Mónica Solarte
+                    </p>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <img src="{% static 'aprendiz/principal/img/encar-enfermeria.jpg' %}" alt="Encargado 5">
+                <div class="informacion">
+                    <h3>Área de Enfermeria</h3>
+                    <p>Julia Carolina Ayala
+                    </p>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <img src="{% static 'aprendiz/principal/img/encar-administrativo.png' %}" alt="Encargado 6">
+                <div class="informacion">
+                    <h3>Área de Apoyo Administrativo</h3>
+                    <p>Catalina Arroyave Marin
+                    </p>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <img src="{% static 'aprendiz/principal/img/lider-social.png' %}" alt="Encargado 7">
+                <div class="informacion">
+                    <h3>Área de Liderazgo</h3>
+                    <p>Juliana Gutierrez</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Banner guia-->
+    <section id="guia-de-manejo">
+        <div class="guia-header">
+            <h2>Guía de Manejo de la Página</h2>
+            <p>Descubre cómo utilizar todas las características y funcionalidades de nuestra página web para
+                aprovechar al máximo tu experiencia. Puedes explorar nuestras areas, navegar por las secciones
+                principales y solicitar agendamientos</p>
+        </div>
+    </section>
+
+    <!--Guia de uso-->
+    <div class="guia">
+        <section id="guia-agendamiento">
+            <h2>Guía de Manejo de Calendario de Agendamiento</h2>
+            <div class="contenido-guia">
+                <h3>1. Visualización del Calendario</h3>
+                <p>Al acceder a la plataforma, podrás visualizar el calendario correspondiente a cada área. Los eventos
+                    programados
+                    se mostrarán en el calendario, permitiéndote conocer las actividades planificadas en cada área.</p>
+
+                <h3>2. Agendar Cita con un Área Específica</h3>
+                <p>Para agendar una cita con un área específica, haz clic en el botón flotante de "Agendar Cita".
+                    Selecciona el
+                    área deseada, elige la fecha y hora de tu preferencia, e ingresa tus datos personales en el
+                    formulario
+                    proporcionado.</p>
+
+                <h3>3. Confirmación por Correo Electrónico</h3>
+                <p>Después de completar el formulario, recibirás un correo electrónico de confirmación indicando si tu
+                    cita ha sido
+                    aceptada o cancelada. En caso de ser aceptada, el correo contendrá detalles adicionales sobre la
+                    cita. Si tu
+                    cita es cancelada, se proporcionará una explicación en el correo.</p>
+
+                <h3>4. Consulta de Eventos y Detalles</h3>
+                <p>Para obtener más información sobre los eventos programados en una área específica, puedes comunicarte
+                    con el
+                    encargado de esa área. Además, puedes revisar los eventos programados directamente en el calendario.
+                </p>
+
+                <h3>5. Modificación o Cancelación de Cita</h3>
+                <p>Si necesitas realizar cambios en una cita existente o cancelarla, por favor, ponte en contacto con el
+                    administrador del área correspondiente. Ellos te proporcionarán la asistencia necesaria para
+                    gestionar tus
+                    agendamientos.</p>
+        </section>
+
+
+    </div>
+
+    <!--Pie de pagina-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'aprendiz/principal/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}"
+                            width="120px" alt="logo sena">
+                        <h4>SENDAPP</h4>
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <p>El CDITI es un centro de excelencia que impulsa la innovación y el desarrollo tecnológico en la
+                    industria y la información.</p>
+                <p>Diagonal. 27a #4-2 a 4-114, Dosquebradas, Risaralda.</p>
+            </div>
+            <div class="box">
+                <h2>REDES SOCIALES</h2>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/SENA/?_rdc=1&_rdr" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/SENAComunica" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQG39sX-BYT0xwAAAYsktPVo4OIRnxRfBng-LzyteEeXkVhe7sPq4bmgMByjLPDwrmyxohc9IPMvB13NOvOuSyOfxtTz6wVdfK2HhiAweQha_bl2ety3xQG-PrypLReG4sMLaI0=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fservicio-nacional-de-aprendizaje-sena-%2F"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+                <div class="tf">
+                    <p class="tf2">@SENAComunica</p>
+                    <p>www.sena.edu.co</p>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Aprendices - Ficha 2503327</b> Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    <script src="{% static '/aprendiz/principal/js/main.js' %}"></script>
+    <script src="{% static '/aprendiz/principal/js/swiper-bundle.min.js' %}"></script>
+
+    <script>
+        var swiper = new Swiper(".bg-slider-thumbs", {
+            loop: true,
+            spaceBetween: 0,
+            slidesPerView: 0,
+
+        });
+        var swiper2 = new Swiper(".bg-slider", {
+            loop: true,
+            spaceBetween: 0,
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+
+
+</body>
+
+</html>

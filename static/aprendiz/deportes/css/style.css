@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    margin-left: 130px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    margin-top: 80px;
+
+}
+
+
+
+/*encabezado*/
+header {
+    width: 100%;
+    height: 80px;
+    background: #39A900;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+
+/*Menu*/
+
+.icono_menu {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icono_menu img {
+    cursor: pointer;
+    margin-left: 20px;
+    position: absolute;
+
+}
+
+.menu {
+    width: 130px;
+    height: 100%;
+    background-color: #39A900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 37px solid #39A900;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+}
+
+/*ocultar scroll chrome, safari y opera*/
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+/*firefox, IE, edge*/
+.menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+
+}
+
+.nombre_pagina {
+    padding: 19px 19px;
+    display: flex;
+    align-items: center;
+}
+
+.nombre_pagina h4 {
+    font-size: 23px;
+}
+
+.nombre_pagina img {
+    width: 85px;
+    margin-right: 20px;
+}
+
+.opciones_menu {
+    padding: 20px 38px;
+    position: absolute;
+    top: 80px;
+}
+
+.opciones_menu a {
+    color: #fff;
+    ;
+    /* 50% de opacidad */
+    cursor: default;
+    font-size: 17px;
+    display: block;
+    position: relative;
+    transition: transform 200ms;
+}
+
+.opciones_menu a:hover {
+    transform: scale(1.2);
+    /* Ajusta el valor para controlar el nivel de zoom */
+}
+
+.opciones_menu .opcion {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.opciones_menu .opcion img {
+    width: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.opciones_menu .opcion h4 {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/*Clases para usar en javaScript MENU*/
+.body_move {
+    margin-left: 250px;
+    overflow: visible; /* Cambiado de 'hidden' a 'visible' o 'auto' */
+}
+
+.menu_move {
+    width: 262px;
+    transform: translateX(0);
+    /* Muestra el menú en pantalla */
+    opacity: 1;
+    /* Hace visible el menú */
+}
+
+section {
+    margin-top: 10px;
+    padding: 50px;
+}
+
+/*Banner*/
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+
+    height: 500px;
+    overflow: hidden;
+
+}
+
+.texto-intro {
+    width: 60%;
+    padding: 20px;
+
+}
+
+.texto-intro h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+span {
+    color: #00324D;
+    font-weight: bold;
+}
+
+#tb {
+    font-size: 22px;
+    color: #39A900;
+}
+
+.texto-intro p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.imagen {
+    width: 100%;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+
+/* Oferta servicios*/
+.titulo h2{
+    margin-top: 50px;
+    margin-bottom: -90px;
+    text-align: center;
+    color: #39A900;
+}
+
+.tiles {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    margin: -2.5em 0 0 -2.5em;
+}
+
+.tiles article {
+    -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+    width: calc(33.33333% - 2.5em);
+    margin: 2.5em 0 0 2.5em;
+}
+
+.tiles article>.image {
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tiles article>.image img {
+    display: block;
+    width: 100%;
+}
+
+.tiles article>.image:before {
+    pointer-events: none;
+    -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+    -ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+    transition: background-color 0.5s ease, opacity 0.5s ease;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1.0;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.tiles article>.image:after {
+    pointer-events: none;
+    -moz-transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.25;
+    z-index: 2;
+}
+
+.tiles article>a {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-transition: background-color 0.5s ease, -moz-transform 0.5s ease;
+    -webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
+    -ms-transition: background-color 0.5s ease, -ms-transform 0.5s ease;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    border-radius: 4px;
+    border-bottom: 0;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.tiles article>a> :last-child {
+    margin: 0;
+}
+
+.tiles article>a:hover {
+    color: #ffffff !important;
+}
+
+.tiles article>a h2 {
+    margin: 0;
+}
+
+.tiles article>a .content {
+    -moz-transition: max-height 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
+    -ms-transition: max-height 0.5s ease, opacity 0.5s ease;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    width: 100%;
+    max-height: 0;
+    line-height: 1.5;
+    margin-top: 0.35em;
+    opacity: 0;
+}
+
+.tiles article>a .content> :last-child {
+    margin-bottom: 0;
+}
+
+.tiles article.style1>.image:before {
+    background-color: #f2849e;
+}
+
+.tiles article.style2>.image:before {
+    background-color: #7ecaf6;
+}
+
+.tiles article.style3>.image:before {
+    background-color: #7bd0c1;
+}
+
+.tiles article.style4>.image:before {
+    background-color: #c75b9b;
+}
+
+.tiles article.style5>.image:before {
+    background-color: #ae85ca;
+}
+
+.tiles article.style6>.image:before {
+    background-color: #8499e7;
+}
+
+body:not(.is-touch) .tiles article:hover>.image {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+body:not(.is-touch) .tiles article:hover>.image:before {
+    background-color: #333333;
+    opacity: 0.35;
+}
+
+body:not(.is-touch) .tiles article:hover>.image:after {
+    opacity: 0;
+}
+
+body:not(.is-touch) .tiles article:hover .content {
+    max-height: 15em;
+    opacity: 1;
+}
+
+*+.tiles {
+    margin-top: 2em;
+}
+
+body.is-preload .tiles article {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+body.is-touch .tiles article .content {
+    max-height: 15em;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .tiles {
+        margin: -1.25em 0 0 -1.25em;
+    }
+
+    .tiles article {
+        width: calc(33.33333% - 1.25em);
+        margin: 1.25em 0 0 1.25em;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+
+    .tiles {
+        margin: -2.5em 0 0 -2.5em;
+    }
+
+    .tiles article {
+        width: calc(50% - 2.5em);
+        margin: 2.5em 0 0 2.5em;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+
+    .tiles {
+        margin: -1.25em 0 0 -1.25em;
+    }
+
+    .tiles article {
+        width: calc(50% - 1.25em);
+        margin: 1.25em 0 0 1.25em;
+    }
+
+    .tiles article:hover>.image {
+        -moz-transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .tiles {
+        margin: 0;
+    }
+
+    .tiles article {
+        width: 100%;
+        margin: 1.25em 0 0 0;
+    }
+
+}
+
+/*Boton Flotante "Agendar Cita" */
+
+.boton-flotante {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #4caf50; 
+    border: none;
+    border-radius: 10px; 
+    width: 130px; 
+    height: 60px; 
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px; 
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #000; 
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Agregada transición suave al color de fondo y transformación */
+    overflow: hidden; /* Oculta el desbordamiento de los seudoelementos */
+    z-index: 1000;
+}
+
+.boton-flotante a {
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.boton-flotante:hover {
+    background-color: #2ce636; 
+    font-weight: bold;
+    box-shadow: 0px 5px 11px #000;
+    transform: scale(1.1); /* Hace que el botón aumente ligeramente de tamaño al pasar el ratón */
+}
+
+.boton-flotante::before,
+.boton-flotante::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2); /* Color del resplandor */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* No afecta los eventos del mouse */
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Agrega transición suave al resplandor */
+}
+
+.boton-flotante::before {
+    transform: translate(-120%, -120%) rotate(45deg);
+}
+
+.boton-flotante::after {
+    transform: translate(120%, 120%) rotate(45deg);
+}
+
+.boton-flotante:hover::before,
+.boton-flotante:hover::after {
+    opacity: 1;
+}
+/*Fin Boton Flotante*/
+
+
+/*botón calendario*/
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh; /* Ajustar la altura al 100% de la vista */
+  margin-top: 20px; /* Ajustar el margen superior según sea necesario */
+}
+
+.button {
+  flex-direction: column;
+  text-align: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.5rem;
+  position: relative;
+  margin: 32px;
+  background: linear-gradient(
+    135deg,
+    #4caf50,
+    #489f4b
+  ); /* Degradado de verde */
+  color: #ffffff;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: linear-gradient(
+    135deg,
+    #4caf50,
+    #489f4b
+  ); /* Degradado de verde */
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translate(-12px, -12px);
+}
+
+.btn:hover::after {
+  transform: translate(6px, 6px);
+}
+
+.btn:hover::before {
+  transform: translate(12px, 12px);
+}
+
+
+/*Horarios*/
+.horarios{
+    margin-top: -50px;
+    
+}
+.horarios h2{
+text-align: center;
+color: #39A900;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/*Informacion*/
+.informacion {
+    background-color: #f5f5f5;
+    max-width: 100%px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+.txt{
+    max-width: 900px;
+    margin: auto;
+}
+.informacion p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    
+}
+
+.informacion h2 {
+   
+    font-size: 19px;
+    color: #39A900;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/*Videos*/
+.video-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.video-container {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/*Footer*/
+.pie-pagina {
+    width: 100%;
+    background-color: #1d3367;
+
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box figure h4 {
+    text-align: center;
+    margin-top: 2px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    margin-right: 15px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    background-color: #0f684b;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+.tf {
+    font-size: 13px;
+    font-weight: bold;
+    width: 250px;
+    letter-spacing: 6px;
+}
+
+.tf2 {
+    margin-top: 10px
+}
+
+/*Responsive*/
+@media screen and (max-width: 760px) {
+
+    /*menu*/
+    .body_move {
+        margin-left: 0px;
+    }
+
+    .menu_move {
+        width: 80px;
+        left: -90px;
+    }
+
+    .menu {
+        width: 90px;
+        border-right: 0px solid #03484c;
+
+    }
+
+    body {
+        margin-left: 90px;
+    }
+
+    .opciones_menu .opcion img {
+        width: 35px;
+        margin-right: 30px;
+    }
+
+    .opciones_menu {
+        padding: 20px 28px;
+    }
+
+    .icono_menu img {
+        margin-left: 5px;
+    }
+
+    .nombre_pagina {
+        padding: 10px 15px;
+
+    }
+
+    /*Banner*/
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        height: 780px;
+    }
+
+    .texto-intro {
+        padding: 10px;
+    }
+    .texto-intro h1 {
+        font-size: 15px;
+    }
+    .texto-intro p{
+        font-size: 15px;
+    }
+    #tb{
+        font-size: 15px;
+    }
+
+ 
+
+  
+
+    /*Footer*/
+
+    .pie-pagina .grupo-1 .box figure {
+        margin: auto;
+    }
+
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .pie-pagina .grupo-1 .box figure h4 {
+        margin-top: 10px;
+    }
+}

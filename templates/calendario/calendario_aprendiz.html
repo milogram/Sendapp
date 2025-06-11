@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Eventos</title> <!-- El título -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'fullcalendar-aprendiz/css/main.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fullcalendar-aprendiz/css/style.css' %}">
+
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Calendario bienestar al aprendiz SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, Calendario aprendiz SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="calendar"></div>
+    </div>
+
+    <div id="urls-container" 
+     data-url-registrar="{% url 'registrar' %}"
+     
+
+</div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title" id="titulo">Detalles evento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="formulario" autocomplete="off">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3">
+                                    <input type="hidden" id="id" name="id">
+                                    <input id="title" type="text" class="form-control" name="title">
+                                    <label for="title">Evento</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="start" type="date" name="start">
+                                    <label for="" class="form-label">Fecha</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="time" type="time" name="time">
+                                    <label for="" class="form-label">Hora</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="description" name="description"></textarea>
+                                    <label for="description" class="form-label">Descripción</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'fullcalendar-aprendiz/js/main.min.js' %}"></script>
+    <script src="{% static 'fullcalendar-aprendiz/js/moment.js' %}"></script>
+
+    <script src="{% static 'fullcalendar-aprendiz/js/es.js' %}"></script>
+    <script src="{% static 'fullcalendar-aprendiz/js/sweetalert2.all.min.js' %}"></script>
+    <script src="{% static 'fullcalendar-aprendiz/js/apps.js' %}"></script>
+</body>
+
+</html>

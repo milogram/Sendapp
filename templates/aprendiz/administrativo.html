@@ -1,0 +1,247 @@
+{% load static %} <!--Corresponde a la carga de archivos static en la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Apoyo Administrativo</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static '/aprendiz/administrativa/css/styles.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Página de apoyo administrativo del SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, Apoyo administrativo SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <!--Seccion Header-->
+    <header>
+        <div class="icono_menu">
+            <img src="{% static 'aprendiz/principal/iconos/menu.png' %}" width="34px" alt="Icono menu" id="btn_abrir">
+        </div>
+
+    </header>
+
+    <!--Seccion Menu-->
+    <nav>
+        <div class="menu" id="menu">
+            <div class="nombre_pagina">
+                <img src="{% static 'aprendiz/principal/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}" width="90px"
+                    alt="Logo sena" id="logosena">
+                <h4>Sendapp</h4>
+            </div>
+
+            <div class="opciones_menu">
+
+                <a href="{% url 'home' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/pagina-de-inicio.png' %}" width="32px"
+                            alt="Icono Inicio" title="Inicio">
+                        <h4>Inicio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'deportes' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/corriendo.png' %}" width="32px"
+                            alt="Icono Deportes" title="Deportes">
+                        <h4>Deportes y Gimnasio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'psicosocial' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/psicologia.png' %}" width="32px"
+                            alt="Icono Psicosocial" title="Psicosocial">
+                        <h4>Psicosocial</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'arte' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/musica-en-vivo.png' %}" width="32px"
+                            alt="Icono Arte y Cultura" title="Arte y Cultura">
+                        <h4>Arte y Cultura</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'enfermeria' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/kit-de-primeros-auxilios.png'%}" width="32px"
+                            alt="Icono Enfermeria" title="Enfermeria">
+                        <h4>Enfermeria</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'sostenimiento' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/comercio-justo.png' %}" width="32px"
+                            alt="Icono Sostenimiento" title="Apoyo Sostenimiento">
+                        <h4>Apoyo Sostenimiento</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'administrativo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/usuario.png' %}" width="32px"
+                            alt="Icono Administrativo" title="Apoyo Administrativo">
+                        <h4>Apoyo Administrativo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'liderazgo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/bandera.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Liderazgo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'ingreso' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/salir.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Salir</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!--Banner Principal-->
+    <div class="banner">
+        <div class="background-image"></div>
+        <div class="overlay"></div>
+        <div class="texto">
+            <h1>¡Apoyo Administrativo SENA!</h1>
+            <p class="t1">Brindamos información transparente y asistencia integral. Trabajamos en colaboración para
+                garantizar tu éxito en el SENA.</p>
+        </div>
+    </div>
+
+
+    <!--Seccion Texto Informativo-->
+
+    <section class="contenido-principal">
+        <!--Burbuja de texto-->
+        <div class="burbuja-text">
+            <p class="burbuja-parrafo">
+
+                ¡Bienvenidos al área de apoyo administrativo del CDITI! Estamos
+                aquí para brindar información precisa y un trato cordial en su
+                experiencia con el SENA. ¡Estamos listos para ayudarles!
+            </p>
+
+        </div>
+
+        <div class="contenido-item">
+            <img src="{% static 'aprendiz/administrativa/img/section-img.jpg' %}" class="imagen-contenido"
+                alt="Imagen de la sección">
+
+            <h3 class="titulo-contenido">¿Que Hacemos?</h3>
+            <p class="texto-contenido">
+                En el área de apoyo administrativo del CDITI, nuestra labor se centra en mantener
+                un riguroso control de las actas de las reuniones que realizamos mensualmente, además de emitir
+                resoluciones para los viajes de nuestros aprendices a eventos y encuentros. La transparencia y el trato
+                cordial son fundamentales en nuestra interacción con los aprendices y otros ciudadanos que buscan
+                información sobre los servicios del SENA. Trabajamos en estrecha colaboración con otras áreas para
+                garantizar que esta información sea precisa y actualizada, asegurándonos de que siempre se transmita a
+                través de canales oficiales como Sena Sofía Plus y la plataforma Compromiso. Nuestro compromiso es
+                brindar a todos los aprendices un acceso seguro a la información y servicios del SENA.
+            </p>
+        </div>
+
+    </section>
+
+    <!--Boton calendario-->
+    <div class="container-button">
+        <div class="button">
+            <a href="{% url 'calendario-aprendiz' %}?usuario_id=8" class="btn btn-1">Ver calendario</a>
+        </div>
+    </div>
+
+    <!--Boton agendar cita-->
+
+    <div class="boton-flotante"><a href="{% url 'agendar_cita' %}">Agendar Cita</a></div>
+
+    <section class="encargados">
+        <h2>Encargados</h2>
+        <div class="tarjeta">
+            <img src="{% static 'aprendiz/administrativa/img/encar-administrativo.png' %}" alt="Encargado 6">
+            <div class="informacion">
+                <h3>Área de Apoyo Administrativo</h3>
+                <p>Catalina Arroyave Marin</p>
+                <p>Contáctame:</p>
+                <ul>
+                    <li><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/TUNUMERODETELEFONO"
+                            target="_blank"></a></li>
+                    <li><i class="fa-regular fa-envelope"></i> Correo Electrónico: <a
+                            href="mailto:caarroyave@sena.edu.co">caarroyave@sena.edu.co</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Pie de pagina-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'aprendiz/principal/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}"
+                            width="120px" alt="logo sena">
+                        <h4>SENDAPP</h4>
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <p>El CDITI es un centro de excelencia que impulsa la innovación y el desarrollo tecnológico en la
+                    industria y la información.</p>
+                <p>Diagonal. 27a #4-2 a 4-114, Dosquebradas, Risaralda.</p>
+            </div>
+            <div class="box">
+                <h2>REDES SOCIALES</h2>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/SENA/?_rdc=1&_rdr" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/SENAComunica" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQG39sX-BYT0xwAAAYsktPVo4OIRnxRfBng-LzyteEeXkVhe7sPq4bmgMByjLPDwrmyxohc9IPMvB13NOvOuSyOfxtTz6wVdfK2HhiAweQha_bl2ety3xQG-PrypLReG4sMLaI0=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fservicio-nacional-de-aprendizaje-sena-%2F"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+                <div class="tf">
+                    <p class="tf2">@SENAComunica</p>
+                    <p>www.sena.edu.co</p>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Aprendices - Ficha 2503327</b> Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    <script src="{% static '/aprendiz/administrativa/js/script.js' %}"></script>
+
+</body>
+
+</html>

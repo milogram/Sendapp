@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Agendar Cita</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static 'aprendiz/agendar_cita/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Formulario de agendamiento de citas del SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, Agendar cita SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <div class="container-form">
+        <h1><i class="fas fa-calendar-alt"></i> SOLICITAR CITA</h1>
+
+        <form method="post" action="{% url 'agendar_cita' %}" id="formulario">
+            {% csrf_token %}
+
+            {% if mensaje_exito %}
+            <p class="success-message"><i class="fas fa-check-circle"></i> {{ mensaje_exito }}</p>
+            {% endif %}
+
+            {% if mensaje_error %}
+            <p class="error-message"><i class="fas fa-exclamation-circle"></i> {{ mensaje_error }}</p>
+            {% endif %}
+
+            <div class="form-field">
+                <label for="nombre"><i class="fas fa-user"></i> Área:</label>
+                {{ form.area }}
+            </div>
+
+            <div class="form-field">
+                <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+                {{ form.nombre }}
+            </div>
+
+            <div class="form-field">
+                <label for="apellidos"><i class="fas fa-user"></i> Apellidos:</label>
+                {{ form.apellidos }}
+            </div>
+
+            <div class="form-field">
+                <label for="telefono"><i class="fas fa-phone"></i> Telefono:</label>
+                {{ form.telefono }}
+            </div>
+
+            <div class="form-field">
+                <label for="correo"><i class="fas fa-envelope"></i> Correo Eletronico:</label>
+                {{ form.email }}
+            </div>
+
+            <div class="form-field">
+                <label for="ficha"><i class="fas fa-id-card"></i> Número de Ficha de Aprendiz:</label>
+                {{ form.ficha }}
+            </div>
+
+            <div class="form-field">
+                <label for="descripcion"><i class="fas fa-pencil"></i> Motivo de la cita:</label>
+                {{ form.descripcion }}
+            </div>
+
+            <a href="{% url 'home' %}" class="btn1"><i class="fas fa-sign-out-alt"></i> Salir</button></a>
+
+            <button class="btn2" type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </form>
+    </div>
+
+
+   
+ 
+    <script src="{% static 'aprendiz/agendar_cita/js/script.js' %}"></script>
+
+
+</body>
+
+</html>

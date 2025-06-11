@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Inicio de sesión</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static 'ingreso/login/css/style.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Inicio de sesión SENDAPP.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, Login">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="background"></div>
+    <div class="container">
+        <div class="login">
+            <div class="content">
+                <img src="{% static 'ingreso/login/img/login-image.png' %}">
+            </div>
+
+            <div class="loginform">
+                <h1>Iniciar Sesión</h1>
+                <form method="post" action="{% url 'ingresar' %}">
+                    {% csrf_token %}
+                    <div class="tbox">
+                        <i class="fas fa-user"></i><input type="text" name="cedula" placeholder="Cédula" required>
+                    </div>
+                    <div class="tbox">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                        <i class="far fa-eye toggle-eye visible-eye" id="togglePassword"></i>
+                    </div>
+                    
+                    
+                    <button class="btn">Ingresar</button>
+                </form>
+
+                {% if msj_error %}
+                <p class="error-message">{{ msj_error }}</p>
+                {% endif %}
+
+                <p>¿Olvidaste la contraseña?</p>
+                <a href="{% url 'olvidar' %}">Recuperar Contraseña</a>
+
+                <div class="volver"><a href="{% url 'ingreso' %}">Volver</a></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="{% static 'ingreso/login/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

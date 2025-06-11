@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    margin-left: 130px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    margin-top: 80px;
+
+}
+
+
+
+/*encabezado*/
+header {
+    
+    width: 100%;
+    height: 80px;
+    background: #39A900;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 9999; /* Ajusta este valor según sea necesario */
+}
+
+
+/*Menu*/
+
+.icono_menu {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icono_menu img {
+    cursor: pointer;
+    margin-left: 20px;
+    position: absolute;
+
+}
+
+.menu {
+    width: 130px;
+    height: 100%;
+    background-color: #39A900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 37px solid #39A900;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+}
+
+/*ocultar scroll chrome, safari y opera*/
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+/*firefox, IE, edge*/
+.menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  
+
+}
+
+.nombre_pagina {
+    padding: 19px 19px;
+    display: flex;
+    align-items: center;
+}
+
+.nombre_pagina h4 {
+    font-size: 23px;
+}
+
+.nombre_pagina img {
+    width: 85px;
+    margin-right: 20px;
+}
+
+.opciones_menu {
+    padding: 20px 38px;
+    position: absolute;
+    top: 80px;
+}
+
+.opciones_menu a {
+    color: #fff;
+    ;
+    /* 50% de opacidad */
+    cursor: default;
+    font-size: 17px;
+    display: block;
+    position: relative;
+    transition: transform 200ms;
+}
+
+.opciones_menu a:hover {
+    transform: scale(1.2);
+    /* Ajusta el valor para controlar el nivel de zoom */
+}
+
+.opciones_menu .opcion {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.opciones_menu .opcion img {
+    width: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.opciones_menu .opcion h4 {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/*Clases para usar en javaScript MENU*/
+.body_move {
+    margin-left: 250px;
+    overflow: visible; /* Cambiado de 'hidden' a 'visible' o 'auto' */
+}
+
+.menu_move {
+    width: 262px;
+    transform: translateX(0); /* Muestra el menú en pantalla */
+    opacity: 1; /* Hace visible el menú */
+}
+
+section {
+    margin-top: 10px;
+    padding: 50px;
+}
+
+/*Banner carrusel*/
+.home{
+    min-height: 90vh;
+}
+
+.bg-slider{
+    z-index: 777;
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+}
+
+.bg-slider .swiper-slide{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.bg-slider .swiper-slide img{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+
+}
+
+.swiper-slide .text-content{
+    position: absolute;
+    top: 15%;
+    color: #fff;
+    margin: 0 200px;
+    transition: 0.3s ease;
+}
+
+.swiper-slide .text-content .title{
+    font-size: 4em;
+    font-weight: 800;
+    text-shadow: var(--text-shadow);
+   
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+.swiper-slide-active .text-content .title{
+    transform: translateY(-50px);
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: 0.3s;
+    transition-property: transform, opacity;
+}
+
+.swiper-slide .text-content .title span{
+    font-size: 0.4em ;
+    margin-left: 10px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.swiper-slide .text-content p{
+    max-width: 700px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    text-shadow: var(--text-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    box-shadow: var(--text-shadow);
+    transform:  translateX(-80px);
+    opacity: 0;
+}
+
+.swiper-slide-active .text-content p{
+    transform:  translateX(0);
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: 0.3s;
+    transition-property: transform, opacity;
+
+
+}
+
+.dark-layer::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.bg-slider-thumbs{
+    z-index: 777;
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease;
+}
+
+.thumbs-container{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    padding: 10px 3px;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    box-shadow: var(--box-shadow);
+
+}
+.thumbs-container img{
+    width: 50px;
+    height: 35px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.swiper-slide-thumb-active{
+    border: 2px solid #fff;
+}
+
+/* Estilo del texto */
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    /* Posición izquierda del texto */
+    transform: translate(0, -50%);
+    text-align: left;
+    color: #fff;
+  
+}
+
+.texto h1 {
+    font-size: 38px;
+    letter-spacing: 3px;
+    color: #39A900;
+    /* Color de título diferente */
+}
+
+.t1 {
+    width: 50%;
+}
+
+.texto p {
+    font-size: 25px;
+    color: #fff;
+    /* Color de texto principal */
+    margin: 10px 0;
+}
+
+.t2 {
+    padding-top: 30px;
+}
+
+span {
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #39A900;
+}
+
+/*texto informaicon*/
+.informacion-princi{
+    padding: 30px;
+    text-align: center;
+}
+
+.informacion-princi h1 {
+    font-size: 36px;
+    color: #39A900;
+    margin-bottom: 20px;
+}
+
+.informacion-princi p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+    text-align: justify;
+}
+
+/*Boton Flotante "Agendar Cita" */
+
+.boton-flotante {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #4caf50; 
+    border: none;
+    border-radius: 10px; 
+    width: 130px; 
+    height: 60px; 
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px; 
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #000; 
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Agregada transición suave al color de fondo y transformación */
+    overflow: hidden; /* Oculta el desbordamiento de los seudoelementos */
+    z-index: 1000;
+}
+
+.boton-flotante a {
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.boton-flotante:hover {
+    background-color: #2ce636; 
+    font-weight: bold;
+    box-shadow: 0px 5px 11px #000;
+    transform: scale(1.1); /* Hace que el botón aumente ligeramente de tamaño al pasar el ratón */
+}
+
+.boton-flotante::before,
+.boton-flotante::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2); /* Color del resplandor */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* No afecta los eventos del mouse */
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Agrega transición suave al resplandor */
+}
+
+.boton-flotante::before {
+    transform: translate(-120%, -120%) rotate(45deg);
+}
+
+.boton-flotante::after {
+    transform: translate(120%, 120%) rotate(45deg);
+}
+
+.boton-flotante:hover::before,
+.boton-flotante:hover::after {
+    opacity: 1;
+}
+/*Fin Boton Flotante*/
+
+
+/* Estilos de la sección de Áreas de Bienestar */
+#areas-bienestar {
+    background-color: #f5f5f5;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+#areas-bienestar h2 {
+    font-size: 28px;
+    color: #39A900;
+}
+
+.contenedor2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.area {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.area img {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.area-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.area h3 {
+    text-align: left;
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+}
+
+.area p {
+    text-align: left;
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón "Ver Más" */
+.ver-mas {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #1d3367;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.ver-mas:hover {
+    background-color: #4CBF00;
+    /* Cambia el color de fondo al pasar el cursor */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Agrega un efecto de brillo */
+}
+
+
+.area:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la sección de encargados */
+.encargados {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.encargados h2 {
+    font-size: 28px;
+    color: #39A900;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta {
+    width: 250px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.tarjeta .informacion {
+    padding: 10px;
+}
+
+.tarjeta h3 {
+    font-size: 20px;
+    color: #333;
+
+}
+
+.tarjeta p {
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #39A900;
+}
+
+/* Estilo al hacer hover en las tarjetas */
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de la sección de Guía de Manejo de la Página */
+#guia-de-manejo {
+    background-image: url('../img/fondo-azul.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    /* Necesario para posicionar elementos hijos */
+}
+
+/* Filtro oscuro con superposición */
+#guia-de-manejo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Color oscuro semi-transparente */
+    z-index: 1;
+    /* Coloca la superposición encima de la imagen */
+}
+
+.guia-header {
+    position: relative;
+    /* Asegura que el contenido esté encima de la superposición */
+    z-index: 2;
+    /* Asegura que el contenido esté encima de la superposición */
+}
+
+.guia-header h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.guia-header p {
+    font-size: 25px;
+    margin: 20px 90px;
+}
+
+#guia-agendamiento {
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.contenido-guia {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.guia {
+   
+    align-items: center;
+    justify-content: center;
+}
+
+#guia-agendamiento h2 {
+    font-size: 28px;
+    color: #39A900;
+}
+
+.contenido-guia h3 {
+    font-size: 20px;
+    padding-top: 8px;
+    color: #39A900;
+}
+
+.contenido-guia p {
+    font-size: 18px;
+    color: #333;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+/* Otros estilos */
+.no-disponible {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 20px;
+}
+
+.disponible {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.color2 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+/*Footer*/
+.pie-pagina {
+    width: 100%;
+    background-color: #1d3367;
+
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box figure h4 {
+    text-align: center;
+    margin-top: 2px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    margin-right: 15px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    background-color: #0f684b;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+.tf {
+    font-size: 13px;
+    font-weight: bold;
+    width: 250px;
+    letter-spacing: 6px;
+}
+
+.tf2 {
+    margin-top: 10px
+}
+
+/*Responsive*/
+@media screen and (max-width: 760px) {
+
+    /*menu*/
+    .body_move {
+        margin-left: 0px;
+    }
+
+    .menu_move {
+        width: 80px;
+        left: -90px;
+    }
+
+    .menu {
+        width: 90px;
+        border-right: 0px solid #03484c;
+
+    }
+
+    body {
+        margin-left: 90px;
+    }
+
+    .opciones_menu .opcion img {
+        width: 35px;
+        margin-right: 30px;
+    }
+
+    .opciones_menu {
+        padding: 20px 28px;
+    }
+
+    .icono_menu img {
+        margin-left: 5px;
+    }
+
+    .nombre_pagina {
+        padding: 10px 15px;
+
+    }
+
+    /*responsive banner carrusel*/
+    .swiper-slide .text-content{
+        margin: 0 70px 0 20px;
+    }
+
+    .swiper-slide .text-content .title{
+        font-size: 3em;
+    }
+    
+    .swiper-slide .text-content span{
+        font-size: 0.36em;
+    }
+
+    .swiper-slide .text-content p{
+        font-size: 0.9em;
+
+    }
+    .t1,
+    .text p,
+    .t2,
+    span {
+        width: 80%;
+        font-size: 3vw;
+    }
+
+    /*Area*/
+    .area {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .area img {
+        width: 100%;
+    }
+
+    /*Guia*/
+    .guia {
+        flex-direction: column;
+    }
+
+
+    .pie-pagina {
+        text-align: center;
+    }
+
+    .pie-pagina .grupo-1 .box figure {
+        margin: auto;
+    }
+
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .pie-pagina .grupo-1 .box figure h4 {
+        margin-top: 10px;
+    }
+
+}
+
+/*Responsive banner carrusel*/
+@media screen and (max-width: 1100px) {
+    
+    .swiper-slide .text-content {
+      margin: 0 120px 0 50px;
+
+    }
+
+    .bg-slider-thumbs{
+        bottom: 2em;
+    }
+  }
+  

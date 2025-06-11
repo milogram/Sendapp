@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo básico para el cuerpo de la página */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Encabezado */
+  #titulo_p {
+    background-color: #00324D;
+    color: #fff;
+    padding: 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+  
+  .icon{
+    background-color: #00324D;
+    color: #fff;
+    padding: 20px;
+    font-size: 5em;
+    text-transform: uppercase;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  /* Columnas izquierda y derecha */
+  .left-column, .right-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  .left-column h3, .right-column h3 {
+    font-weight: bold;
+    color: #00324D;
+    margin: 10px;
+  }
+  
+  .left-column i, .right-column i {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #00324D;
+  }
+  
+  /* Botón de Modificar Perfil */
+  .container-btn {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .button {
+    display: inline-block; /* Esto hace que los botones aparezcan uno al lado del otro */
+    margin-right: 10px; /* Agrega un margen entre los botones si es necesario */
+    
+  }
+  
+  .button a {
+    text-decoration: none;
+    color: #00324D;
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #00324D;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    
+  }
+  
+  .button a .las {
+    margin-right: 0; /* Eliminamos el margen derecho para el ícono */
+  }
+  
+  .button a:hover {
+    background-color: #00324D;
+    color: #fff;
+  }
+  
+  /* Estilo para íconos en botones */
+  .las {
+    font-size: 1.2em;
+  }
+  
+  /* Estilo para enlaces */
+  a {
+    color: #00324D;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }

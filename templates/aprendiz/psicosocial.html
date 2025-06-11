@@ -1,0 +1,281 @@
+{% load static %} <!--Corresponde a la carga de archivos static en la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Psicosocial</title> <!-- El título -->
+    <link rel="stylesheet" href="{% static '/aprendiz/psicosocial/css/styles.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Página liderazgo bienestar al aprendiz del SENA CDITI.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, CDITI, liderazgo SENA">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <!--Seccion Header-->
+    <header>
+        <div class="icono_menu">
+            <img src="{% static 'aprendiz/principal/iconos/menu.png' %}" width="34px" alt="Icono menu" id="btn_abrir">
+        </div>
+
+    </header>
+
+    <!--Seccion Menu-->
+    <nav>
+        <div class="menu" id="menu">
+            <div class="nombre_pagina">
+                <img src="{% static 'aprendiz/principal/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}" width="90px"
+                    alt="Logo sena" id="logosena">
+                <h4>Sendapp</h4>
+            </div>
+
+            <div class="opciones_menu">
+
+                <a href="{% url 'home' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/pagina-de-inicio.png' %}" width="32px"
+                            alt="Icono Inicio" title="Inicio">
+                        <h4>Inicio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'deportes' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/corriendo.png' %}" width="32px"
+                            alt="Icono Deportes" title="Deportes">
+                        <h4>Deportes y Gimnasio</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'psicosocial' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/psicologia.png' %}" width="32px"
+                            alt="Icono Psicosocial" title="Psicosocial">
+                        <h4>Psicosocial</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'arte' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/musica-en-vivo.png' %}" width="32px"
+                            alt="Icono Arte y Cultura" title="Arte y Cultura">
+                        <h4>Arte y Cultura</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'enfermeria' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/kit-de-primeros-auxilios.png'%}" width="32px"
+                            alt="Icono Enfermeria" title="Enfermeria">
+                        <h4>Enfermeria</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'sostenimiento' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/comercio-justo.png' %}" width="32px"
+                            alt="Icono Sostenimiento" title="Apoyo Sostenimiento">
+                        <h4>Apoyo Sostenimiento</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'administrativo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/usuario.png' %}" width="32px"
+                            alt="Icono Administrativo" title="Apoyo Administrativo">
+                        <h4>Apoyo Administrativo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'liderazgo' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/bandera.png' %}" width="32px"
+                            alt="Icono Liderazgo" title="Liderazgo">
+                        <h4>Liderazgo</h4>
+                    </div>
+                </a>
+
+                <a href="{% url 'ingreso' %}">
+                    <div class="opcion">
+                        <img src="{% static 'aprendiz/principal/iconos/salir.png' %}" width="32px" alt="Icono Liderazgo"
+                            title="Liderazgo">
+                        <h4>Salir</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Banner-->
+    <div class="banner">
+        <div class="background-image"></div>
+        <div class="texto">
+            <h1>Área de Psicosocial</h1>
+            <p>Tú bienestar es nuestra prioridad.</p>
+        </div>
+    </div>
+
+    <div class="introduccion">
+        <div class="introduccion-content">
+            <p>En el Servicio Nacional de Aprendizaje (SENA), reconocemos la importancia del bienestar integral de
+                nuestros
+                estudiantes. Más allá de la formación académica, comprendemos que la salud mental y emocional es un
+                componente esencial en tu éxito personal y educativo.</p>
+            <p>Nuestro compromiso con tu bienestar nos lleva a ofrecer un área dedicada a tu salud mental y emocional,
+                conocida como el Área de Psicosocial.</p>
+        </div>
+    </div>
+
+
+    <!--Contenido de informacion-->
+    <div class="info-section">
+        <div class="info-text">
+
+            <p>
+            <h2>¿Qué es el Área de Psicosocial?</h2>
+            <p>El Área de Psicosocial en el SENA es un recurso fundamental que se centra en brindar apoyo y orientación
+                a los aprendices en cuestiones relacionadas con su salud mental y emocional. Dirigida por la Psicóloga
+                Mónica Solarte y su equipo de profesionales capacitados, esta área ofrece una variedad de servicios
+                diseñados para empoderarte en tu viaje personal y académico.</p>
+
+            <h2>Nuestros Servicios:</h2>
+            <p>En el Área de Psicosocial, comprendemos que cada estudiante es único y enfrenta desafíos personales y
+                académicos diversos. Por lo tanto, hemos desarrollado una gama de servicios para satisfacer tus
+                necesidades:</p>
+
+            <h2>Orientación Psicológica:</h2>
+            <p> Nuestros profesionales te brindarán apoyo y orientación personalizada para
+                abordar preocupaciones, ansiedades y desafíos emocionales que puedas enfrentar. Estamos aquí para
+                escucharte y ayudarte a encontrar soluciones.</p>
+
+            <h2>Talleres Psicoeducativos:</h2>
+            <p> Ofrecemos una serie de talleres y sesiones educativas que abordan una variedad
+                de temas relevantes, como manejo del estrés, resolución de conflictos, prevención de la ansiedad,
+                habilidades de comunicación y más.</p>
+
+            <h2>Intervenciones en Crisis:</h2>
+            <p>En situaciones de emergencia o crisis, nuestro equipo de expertos está
+                preparado para brindar los primeros auxilios psicológicos y apoyo inmediato. Tu bienestar es nuestra
+                prioridad en todo momento.</p>
+
+            <h2>Eventos y Conmemoraciones:</h2>
+            <p>Participamos activamente en eventos y campañas nacionales relacionadas con la
+                salud mental, como la prevención del suicidio, la promoción de la salud mental y la concienciación sobre
+                discapacidades. Estos eventos ayudan a crear conciencia y fomentar un entorno de apoyo.</p>
+
+            <h2>Confidencialidad y Privacidad:</h2>
+            <p>Entendemos la importancia de la confidencialidad en todos los aspectos de nuestros servicios. Todos los
+                detalles de tus sesiones y consultas se manejan de manera absolutamente confidencial, a menos que exista
+                una situación de riesgo vital o legal que requiera que rompamos esa confidencialidad.</p>
+        </div>
+        <div class="info-image"></div>
+    </div>
+
+    <!--Boton flotante pedir cita-->
+    <div class="boton-flotante"><a href="{% url 'agendar_cita' %}">Agendar Cita</a></div>
+
+    <!--botón Calendario-->
+    <div class="container-button">
+        <div class="button">
+            <a href="{% url 'calendario-aprendiz' %}?usuario_id=4" class="btn btn-1">Ver calendario</a>
+        </div>
+    </div>
+    <!--fin -botón Calendario-->
+
+    <!--Tarjetas de informacion de guias-->
+    <section class="cards">
+
+        <div class="card">
+            <img src="{% static 'aprendiz/psicosocial/img/pdf1.jpg' %}" alt="Imagen 1">
+            <h4>Se feliz</h4>
+            <p>Descubre las claves para encontrar la felicidad en el libro "Se Feliz" de Marisa Bosqued. Con valiosas
+                enseñanzas y reflexiones, esta obra te guiará hacia un camino de positividad y bienestar. ¡Explora la
+                alegría de vivir!</p>
+            <a href="{% static 'aprendiz/psicosocial/pdf/¡ Sé feliz!.pdf' %}" target="_blank"
+                class="btn-descargar">Ver</a>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'aprendiz/psicosocial/img/pdf5.webp' %}" alt="Imagen 1">
+            <h4>Inteligencia Emocional</h4>
+            <p> Sumérgete en el fascinante mundo de la inteligencia emocional con Daniel Goleman. Su libro ofrece una
+                perspectiva única sobre cómo nuestras emociones impactan en nuestras vidas. Descubre herramientas
+                prácticas para gestionar tus emociones </p>
+            <a href="{% static 'aprendiz/psicosocial/pdf/Daniel goleman Intelgencia Emocional.pdf' %}" target="_blank"
+                class="btn-descargar">Ver</a>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'aprendiz/psicosocial/img/pdf3.png' %}" alt="Imagen 2">
+            <h4>Cuentos para vivir emociones</h4>
+            <p>"Cuentos para Vivir Emociones" de Begoña Ibarrola es una colección de relatos cautivadores que exploran
+                el mundo emocional. A través de historias entrañables, este libro invita a niños y adultos a comprender
+                y expresar sus emociones de manera saludable. </p>
+            <a href="{% static 'aprendiz/psicosocial/pdf/Cuentos para vivir... Emociones.pdf' %}" target="_blank"
+                class="btn-descargar">Ver</a>
+        </div>
+    </section>
+
+    <!--Pie de pagina-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'aprendiz/principal/iconos/logo-de-Sena-sin-fondo-Blanco.png' %}"
+                            width="120px" alt="logo sena">
+                        <h4>SENDAPP</h4>
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <p>El CDITI es un centro de excelencia que impulsa la innovación y el desarrollo tecnológico en la
+                    industria y la información.</p>
+                <p>Diagonal. 27a #4-2 a 4-114, Dosquebradas, Risaralda.</p>
+            </div>
+            <div class="box">
+                <h2>REDES SOCIALES</h2>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/senacomunica/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/SENA/?_rdc=1&_rdr" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/SENAComunica" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/SENATV" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQG39sX-BYT0xwAAAYsktPVo4OIRnxRfBng-LzyteEeXkVhe7sPq4bmgMByjLPDwrmyxohc9IPMvB13NOvOuSyOfxtTz6wVdfK2HhiAweQha_bl2ety3xQG-PrypLReG4sMLaI0=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fservicio-nacional-de-aprendizaje-sena-%2F"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+                <div class="tf">
+                    <p class="tf2">@SENAComunica</p>
+                    <p>www.sena.edu.co</p>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Aprendices - Ficha 2503327</b> Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <script src="{% static '/aprendiz/deportes/js/script.js' %}"></script>
+</body>
+
+</html>

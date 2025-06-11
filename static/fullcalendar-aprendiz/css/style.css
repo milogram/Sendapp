@@ -1,0 +1,48 @@
+/* CSS personalizado */
+#calendar {
+    /* Cambia el fondo del calendario */
+    background-color: #00324D;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+
+  /* Estilo para los días del mes en la vista de mes */
+  .fc-day {
+    background-color: #ffffff;
+  }
+
+
+ /* Cambiar el color de la barra de navegación */
+.fc .fc-button-primary {
+    background-color: #fff;
+    color: #00324D;
+}
+.fc .fc-button-primary:hover {
+    background-color: #86B7FE;
+}
+.fc .fc-button-primary:not(:disabled).fc-button-active{
+    background-color: #86B7FE;
+}
+
+.fc .fc-button:disabled {
+    opacity: .75 ;
+    color: #000;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color:#036ca4 ;
+}
+
+
+
+
+
+
+.fc .fc-scroller-liquid:hover {
+   color: #000;
+}
+

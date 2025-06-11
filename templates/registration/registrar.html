@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> <!-- Corresponde a los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corresponde al responsive de la página escala al 1 -->
+    <title>Registro de usuarios</title> <!-- El título -->
+    <link rel="stylesheet" type="text/css" href="{% static '/ingreso/ingreso/css/style.css' %}">
+    <!-- Corresponde a la ubicación de los estilos en CSS -->
+    <meta name="description" content="Registrar usuarios SENDAPP.">
+    <!-- Corresponde a la descripción de la página -->
+    <meta name="keywords" content="Sendapp, crear usuarios, CDITI">
+    <!-- Corresponde a la identificación en búsqueda con palabras especiales -->
+    <meta name="author" content="Camilo Copete, Jhon Montes, Jose Murillo, Daniela Carvajal">
+    <!-- Corresponde a los creadores de la página web -->
+    <script src="https://kit.fontawesome.com/3348c62911.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="{% url 'get_user_list' %}" class="back-button">&#8592; Página anterior</a>
+    <div class="contenedor">
+        <h2>Registrar Usuario</h2>
+        <form class="formulario" method="post">
+            {% csrf_token %}
+
+            <div class="fila">
+                <div class="campo">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" name="nombres" required>
+                </div>
+
+                <div class="campo">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" required>
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" name="telefono" required>
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label for="area">Área</label>
+                    <select name="area">
+                        <option value="1">No aplica</option>
+                        <option value="2">Deportes</option>
+                        <option value="3">Psicosocial</option>
+                        <option value="4">Arte y Cultura</option>
+                        <option value="5">Enfermería</option>
+                        <option value="6">Líder Social</option>
+                        <option value="7">Apoyo Administrativo</option>
+                        <option value="8">Apoyo Sostenimiento</option>
+
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="rol">Rol</label>
+                    <select name="rol">
+                        <option value="1">Bienestar</option>
+                        <option value="2">Administrador</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label for="cedula">Cédula</label>
+                    <input type="text" name="cedula" required>
+                </div>
+
+                <div class="campo">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" required>
+                </div>
+            </div>
+
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+            </ul>
+            {% endif %}
+            <input type="submit" value="Crear Cuenta">
+        </form>
+    </div>
+
+    <div class="button-container">
+        <a href="{% url 'admin' %}" class="admin-home-button">Ir a Inicio</a>
+    </div>
+
+</body>
+<html>
